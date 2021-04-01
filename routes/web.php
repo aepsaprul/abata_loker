@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/client', [ClientController::class, 'index'])->name('client');
+    Route::get('/client/form-syarat', [ClientController::class, 'formSyarat'])->name('client.form.syarat');
+});
