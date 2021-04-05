@@ -31,6 +31,20 @@
                     <div class="row">
                         <div class="col-md-4 mx-auto">
                             <div class="form-group">
+                                <label for="telepon" class="font-weight-bold">Nomor WhatsApp</label>
+                                <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" required autocomplete="telepon" autofocus>
+
+                                @error('telepon')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mx-auto">
+                            <div class="form-group">
                                 <label for="email" class="font-weight-bold">Email</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 

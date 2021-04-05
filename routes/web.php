@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ClientController;
 
 /*
@@ -20,9 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::put('/home/persyaratan/update', [HomeController::class, 'persyaratanUpdate'])->name('home.persyaratan.update');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/client', [ClientController::class, 'index'])->name('client');
-    Route::get('/client/form-syarat', [ClientController::class, 'formSyarat'])->name('client.form.syarat');
+    Route::put('/client/persyaratan/update', [ClientController::class, 'persyaratanUpdate'])->name('client.persyaratan.update');
 });
