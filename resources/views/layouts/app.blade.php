@@ -29,6 +29,8 @@
             border-radius: 10px;
         }
     </style>
+
+    @yield('style')
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -71,5 +73,7 @@
 
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap4/bootstrap.min.js') }}"></script>
+
+    @yield('script')
 </body>
 </html>
