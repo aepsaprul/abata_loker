@@ -164,6 +164,11 @@
                                         </select>
                                     </div>  
                                 </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
 
                                 {{-- media sosial  --}}
                                 <div class="col-md-12">
@@ -187,6 +192,11 @@
                                         <input type="text" name="youtube" class="form-control @error('youtube') is-invalid @enderror" id="youtube" placeholder="" required>
                                     </div>  
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
 
                                 {{-- susunan keluarga sebelum menikah --}}
                                 <div class="col-md-12">
@@ -255,6 +265,11 @@
                                 <p class="container" id="saudara">  
 
                                 </p>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
 
                                 {{-- susunan keluarga setelah menikah  --}}
                                 <div class="container" id="susunan_keluarga_setelah_menikah">
@@ -262,54 +277,66 @@
                                         <div class="col-md-12">
                                             <p class="text-center text-capitalize font-weight-bold">Susunan Keluarga Setelah Menikah</p>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="nama_istri">Nama Istri</label>
-                                                <input type="text" name="nama_istri" class="form-control @error('nama_istri') is-invalid @enderror" id="nama_istri" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="tempat_lahir_istri">Tempat Lahir Istri</label>
-                                                <input type="text" name="tempat_lahir_istri" class="form-control @error('tempat_lahir_istri') is-invalid @enderror" id="tempat_lahir_istri" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="tanggal_lahir_istri">Tanggal Lahir Istri</label>
-                                                <input type="text" name="tanggal_lahir_istri" class="form-control @error('tanggal_lahir_istri') is-invalid @enderror" id="tanggal_lahir_istri" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="pekerjaan_terakhir_istri">Pekerjaan Terakhir Istri</label>
-                                                <input type="text" name="pekerjaan_terakhir_istri" class="form-control @error('pekerjaan_terakhir_istri') is-invalid @enderror" id="pekerjaan_terakhir_istri" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="nama_suami">Nama Suami</label>
-                                                <input type="text" name="nama_suami" class="form-control @error('nama_suami') is-invalid @enderror" id="nama_suami" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="tempat_lahir_suami">Tempat Lahir Suami</label>
-                                                <input type="text" name="tempat_lahir_suami" class="form-control @error('tempat_lahir_suami') is-invalid @enderror" id="tempat_lahir_suami" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="tanggal_lahir_suami">Tanggal Lahir Suami</label>
-                                                <input type="text" name="tanggal_lahir_suami" class="form-control @error('tanggal_lahir_suami') is-invalid @enderror" id="tanggal_lahir_suami" placeholder="" required>
-                                            </div>  
-                                        </div> 
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                            <div class="form-group">
-                                                <label for="pekerjaan_terakhir_suami">Pekerjaan Terakhir Suami</label>
-                                                <input type="text" name="pekerjaan_terakhir_suami" class="form-control @error('pekerjaan_terakhir_suami') is-invalid @enderror" id="pekerjaan_terakhir_suami" placeholder="" required>
-                                            </div>  
-                                        </div> 
+
+                                        {{-- istri  --}}
+                                        <div id="istri" class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="nama_istri">Nama Istri</label>
+                                                        <input type="text" name="nama_istri" class="form-control @error('nama_istri') is-invalid @enderror" id="nama_istri" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="tempat_lahir_istri">Tempat Lahir Istri</label>
+                                                        <input type="text" name="tempat_lahir_istri" class="form-control @error('tempat_lahir_istri') is-invalid @enderror" id="tempat_lahir_istri" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="tanggal_lahir_istri">Tanggal Lahir Istri</label>
+                                                        <input type="text" name="tanggal_lahir_istri" class="form-control @error('tanggal_lahir_istri') is-invalid @enderror" id="tanggal_lahir_istri" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="pekerjaan_terakhir_istri">Pekerjaan Terakhir Istri</label>
+                                                        <input type="text" name="pekerjaan_terakhir_istri" class="form-control @error('pekerjaan_terakhir_istri') is-invalid @enderror" id="pekerjaan_terakhir_istri" placeholder="" required>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {{-- suami  --}}
+                                        <div id="suami" class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="nama_suami">Nama Suami</label>
+                                                        <input type="text" name="nama_suami" class="form-control @error('nama_suami') is-invalid @enderror" id="nama_suami" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="tempat_lahir_suami">Tempat Lahir Suami</label>
+                                                        <input type="text" name="tempat_lahir_suami" class="form-control @error('tempat_lahir_suami') is-invalid @enderror" id="tempat_lahir_suami" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="tanggal_lahir_suami">Tanggal Lahir Suami</label>
+                                                        <input type="text" name="tanggal_lahir_suami" class="form-control @error('tanggal_lahir_suami') is-invalid @enderror" id="tanggal_lahir_suami" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                    <div class="form-group">
+                                                        <label for="pekerjaan_terakhir_suami">Pekerjaan Terakhir Suami</label>
+                                                        <input type="text" name="pekerjaan_terakhir_suami" class="form-control @error('pekerjaan_terakhir_suami') is-invalid @enderror" id="pekerjaan_terakhir_suami" placeholder="" required>
+                                                    </div>  
+                                                </div> 
+                                            </div>
+                                        </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="jml_anak">Jumlah Anak</label>
@@ -326,6 +353,11 @@
 
                                         </p>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <hr class="border-secondary">
+                                        </div> 
+                                    </div> 
                                 </div>
 
                                 {{-- kerabat yg bisa dihubungi saat darurat  --}}
@@ -362,163 +394,67 @@
                                         <input type="text" name="alamat_kerabat" class="form-control @error('alamat_kerabat') is-invalid @enderror" id="alamat_kerabat" placeholder="" required>
                                     </div>  
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
 
                                 {{-- data pendidikan  --}}                                
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Data Pendidikan</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Data Pendidikan Terakhir</p>
                                 </div>
-                                {{-- data pendidikan sd  --}}
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <h6>SD / Sederajat</h6>
+                                        <label for="pendidikan_tingkat">Tingkatan Pendidikan</label>
+                                        <select name="pendidikan_tingkat" id="pendidikan_tingkat" class="form-control @error('pendidikan_tingkat') is-invalid @enderror" required>
+                                            <option value="">--Pilih Pendidikan--</option>
+                                            <option value="1">SD / Sederajat</option>
+                                            <option value="2">SMP / Sederajat</option>
+                                            <option value="3">SMA / Sederajat</option>
+                                            <option value="4">D1</option>
+                                            <option value="5">D2</option>
+                                            <option value="6">D3</option>
+                                            <option value="7">S1</option>
+                                            <option value="8">S2</option>
+                                            <option value="9">S3</option>
+                                        </select>
                                     </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_nama_sekolah_sd">Nama Sekolah</label>
-                                        <input type="text" name="pendidikan_nama_sekolah_sd" class="form-control @error('pendidikan_nama_sekolah_sd') is-invalid @enderror" id="pendidikan_nama_sekolah_sd" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_kota_sd">Kota</label>
-                                        <input type="text" name="pendidikan_kota_sd" class="form-control @error('pendidikan_kota_sd') is-invalid @enderror" id="pendidikan_kota_sd" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_masuk_sd">Tahun Masuk</label>
-                                        <input type="text" name="pendikan_tahun_masuk_sd" class="form-control @error('pendikan_tahun_masuk_sd') is-invalid @enderror" id="pendikan_tahun_masuk_sd" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_lulus_sd">Tahun Lulus</label>
-                                        <input type="text" name="pendikan_tahun_lulus_sd" class="form-control @error('pendikan_tahun_lulus_sd') is-invalid @enderror" id="pendikan_tahun_lulus_sd" placeholder="" required>
-                                    </div>  
-                                </div> 
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <hr class="border-secondary">
-                                    </div> 
-                                </div> 
-                                {{-- data pendidikan smp  --}}
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <h6>SMP / Sederajat</h6>
+                                        <label for="pendidikan_nama_gedung">Nama <span class="nama_gedung"></span></label>
+                                        <input type="text" name="pendidikan_nama_gedung" class="form-control @error('pendidikan_nama_gedung') is-invalid @enderror" id="pendidikan_nama_gedung" placeholder="" required>
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
-                                        <label for="pendidikan_nama_sekolah_smp">Nama Sekolah</label>
-                                        <input type="text" name="pendidikan_nama_sekolah_smp" class="form-control @error('pendidikan_nama_sekolah_smp') is-invalid @enderror" id="pendidikan_nama_sekolah_smp" placeholder="" required>
+                                        <label for="pendidikan_kota">Kota</label>
+                                        <input type="text" name="pendidikan_kota" class="form-control @error('pendidikan_kota') is-invalid @enderror" id="pendidikan_kota" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group jurusan">
+                                        
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
-                                        <label for="pendidikan_kota_smp">Kota</label>
-                                        <input type="text" name="pendidikan_kota_smp" class="form-control @error('pendidikan_kota_smp') is-invalid @enderror" id="pendidikan_kota_smp" placeholder="" required>
+                                        <label for="pendikan_tahun_masuk">Tahun Masuk</label>
+                                        <input type="text" name="pendikan_tahun_masuk" class="form-control @error('pendikan_tahun_masuk') is-invalid @enderror" id="pendikan_tahun_masuk" placeholder="" required>
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
-                                        <label for="pendikan_tahun_masuk_smp">Tahun Masuk</label>
-                                        <input type="text" name="pendikan_tahun_masuk_smp" class="form-control @error('pendikan_tahun_masuk_smp') is-invalid @enderror" id="pendikan_tahun_masuk_smp" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_lulus_smp">Tahun Lulus</label>
-                                        <input type="text" name="pendikan_tahun_lulus_smp" class="form-control @error('pendikan_tahun_lulus_smp') is-invalid @enderror" id="pendikan_tahun_lulus_smp" placeholder="" required>
-                                    </div>  
-                                </div>                              
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <hr class="border-secondary">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <h6>SMA / Sederajat</h6>
-                                    </div>  
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="pendidikan_nama_sekolah_sma">Nama Sekolah</label>
-                                        <input type="text" name="pendidikan_nama_sekolah_sma" class="form-control @error('pendidikan_nama_sekolah_sma') is-invalid @enderror" id="pendidikan_nama_sekolah_sma" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_kota_sma">Kota</label>
-                                        <input type="text" name="pendidikan_kota_sma" class="form-control @error('pendidikan_kota_sma') is-invalid @enderror" id="pendidikan_kota_sma" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_jurusan_sma">Jurusan</label>
-                                        <input type="text" name="pendidikan_jurusan_sma" class="form-control @error('pendidikan_jurusan_sma') is-invalid @enderror" id="pendidikan_jurusan_sma" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_masuk_sma">Tahun Masuk</label>
-                                        <input type="text" name="pendikan_tahun_masuk_sma" class="form-control @error('pendikan_tahun_masuk_sma') is-invalid @enderror" id="pendikan_tahun_masuk_sma" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_lulus_sma">Tahun Lulus</label>
-                                        <input type="text" name="pendikan_tahun_lulus_sma" class="form-control @error('pendikan_tahun_lulus_sma') is-invalid @enderror" id="pendikan_tahun_lulus_sma" placeholder="" required>
+                                        <label for="pendikan_tahun_lulus">Tahun Lulus</label>
+                                        <input type="text" name="pendikan_tahun_lulus" class="form-control @error('pendikan_tahun_lulus') is-invalid @enderror" id="pendikan_tahun_lulus" placeholder="" required>
                                     </div>  
                                 </div>                               
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <hr class="border-secondary">
                                     </div> 
-                                </div> 
-
-                                {{-- pendidikan perguruan tinggi  --}}
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <h6>Perguruan Tinggi</h6>
-                                    </div>  
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="pendidikan_nama_kampus">Nama Perguruan Tinggi</label>
-                                        <input type="text" name="pendidikan_nama_kampus" class="form-control @error('pendidikan_nama_kampus') is-invalid @enderror" id="pendidikan_nama_kampus" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_kota_kampus">Kota</label>
-                                        <input type="text" name="pendidikan_kota_kampus" class="form-control @error('pendidikan_kota_kampus') is-invalid @enderror" id="pendidikan_kota_kampus" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendidikan_jurusan_kampus">Jurusan</label>
-                                        <input type="text" name="pendidikan_jurusan_kampus" class="form-control @error('pendidikan_jurusan_kampus') is-invalid @enderror" id="pendidikan_jurusan_kampus" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_masuk_kampus">Tahun Masuk</label>
-                                        <input type="text" name="pendikan_tahun_masuk_kampus" class="form-control @error('pendikan_tahun_masuk_kampus') is-invalid @enderror" id="pendikan_tahun_masuk_kampus" placeholder="" required>
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pendikan_tahun_lulus_kampus">Tahun Lulus</label>
-                                        <input type="text" name="pendikan_tahun_lulus_kampus" class="form-control @error('pendikan_tahun_lulus_kampus') is-invalid @enderror" id="pendikan_tahun_lulus_kampus" placeholder="" required>
-                                    </div>  
-                                </div>                              
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <hr class="border-secondary">
-                                    </div> 
-                                </div> 
+                                </div>
 
                                 {{-- pelatihan  --}}
                                 <div class="col-md-12">
@@ -633,6 +569,204 @@
                                         <input type="text" name="organisasi_masa_kerja[]" class="form-control @error('organisasi_masa_kerja') is-invalid @enderror" id="organisasi_masa_kerja" placeholder="" required>
                                     </div>  
                                 </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
+
+                                {{-- riwayat pekerjaan terkahir  --}}
+                                <div class="col-md-12">
+                                    <p class="text-center text-capitalize font-weight-bold">Riwayat Pekerjaan Di Perusahaan Terakhir (kalau ada)</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_nama">Nama Perusahaan</label>
+                                        <input type="text" name="pekerjaan_nama" class="form-control @error('pekerjaan_nama') is-invalid @enderror" id="pekerjaan_nama" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_jenis_industri">Jenis Industri</label>
+                                        <input type="text" name="pekerjaan_jenis_industri" class="form-control @error('pekerjaan_jenis_industri') is-invalid @enderror" id="pekerjaan_jenis_industri" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_jabatan_awal">Jabatan Awal</label>
+                                        <input type="text" name="pekerjaan_jabatan_awal" class="form-control @error('pekerjaan_jabatan_awal') is-invalid @enderror" id="pekerjaan_jabatan_awal" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_jabatan_akhir">Jabatan Akhir</label>
+                                        <input type="text" name="pekerjaan_jabatan_akhir" class="form-control @error('pekerjaan_jabatan_akhir') is-invalid @enderror" id="pekerjaan_jabatan_akhir" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_awal_bekerja">Awal Bekerja</label>
+                                        <input type="text" name="pekerjaan_awal_bekerja" class="form-control @error('pekerjaan_awal_bekerja') is-invalid @enderror" id="pekerjaan_awal_bekerja" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_akhir_bekerja">Akhir Bekerja</label>
+                                        <input type="text" name="pekerjaan_akhir_bekerja" class="form-control @error('pekerjaan_akhir_bekerja') is-invalid @enderror" id="pekerjaan_akhir_bekerja" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_gaji_awal">Gaji Awal</label>
+                                        <input type="text" name="pekerjaan_gaji_awal" class="form-control @error('pekerjaan_gaji_awal') is-invalid @enderror" id="pekerjaan_gaji_awal" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_gaji_akhir">Gaji Akhir</label>
+                                        <input type="text" name="pekerjaan_gaji_akhir" class="form-control @error('pekerjaan_gaji_akhir') is-invalid @enderror" id="pekerjaan_gaji_akhir" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_nama_atasan_langsung">Nama Atasan Langsung</label>
+                                        <input type="text" name="pekerjaan_nama_atasan_langsung" class="form-control @error('pekerjaan_nama_atasan_langsung') is-invalid @enderror" id="pekerjaan_nama_atasan_langsung" placeholder="" required>
+                                    </div>  
+                                </div> 
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="form-group">
+                                        <label for="pekerjaan_alasan_berhenti">Alasan Berhenti</label>
+                                        <input type="text" name="pekerjaan_alasan_berhenti" class="form-control @error('pekerjaan_alasan_berhenti') is-invalid @enderror" id="pekerjaan_alasan_berhenti" placeholder="" required>
+                                    </div>  
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="tugas_pokok">Uraikan Tugas Pokok Anda Di Perusahaan Terakhir</label>
+                                        <textarea name="tugas_pokok" id="tugas_pokok" class="form-control @error('tugas_pokok') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
+
+                                {{-- pertanyaan tambahan  --}}
+                                <div class="col-md-12">
+                                    <p class="text-center text-capitalize font-weight-bold">Pertanyaan Tambahan</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan1">Apakah anda sedang mengikuti peroses rekrutmen dan seleksi di perusahaan lain? Jika ya, sebutkan nama perusahaannya</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan1_radio" id="pertanyaan1_ya" value="ya">
+                                        <label class="form-check-label" for="pertanyaan1_ya">Ya</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan1_radio" id="pertanyaan1_tidak" value="tidak">
+                                        <label class="form-check-label" for="pertanyaan1_tidak">Tidak</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan1_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan1_uraian" id="pertanyaan1_uraian" class="form-control @error('pertanyaan1_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan2">Apakah anda bersedia dengan jam kerja shift dan system kontrak?</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan2_radio" id="pertanyaan2_ya" value="ya">
+                                        <label class="form-check-label" for="pertanyaan2_ya">Ya</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan2_radio" id="pertanyaan2_tidak" value="tidak">
+                                        <label class="form-check-label" for="pertanyaan2_tidak">Tidak</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan2_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan2_uraian" id="pertanyaan2_uraian" class="form-control @error('pertanyaan2_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan3">Apa anda bersedia di tempatkan di segala posisi kerja? Sebutkan posisi yang anda inginkan dan mengapa</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan3_radio" id="pertanyaan3_ya" value="ya">
+                                        <label class="form-check-label" for="pertanyaan3_ya">Ya</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="pertanyaan3_radio" id="pertanyaan3_tidak" value="tidak">
+                                        <label class="form-check-label" for="pertanyaan3_tidak">Tidak</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan3_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan3_uraian" id="pertanyaan3_uraian" class="form-control @error('pertanyaan3_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan4">Apa alasan anda mendaftar di perusahaan kami?</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan4_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan4_uraian" id="pertanyaan4_uraian" class="form-control @error('pertanyaan4_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan5">Bila diterima, berapa besar gaji dan fasilitas apa yang anda harapkan? Apakah menurut anda layak?</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan5_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan5_uraian" id="pertanyaan5_uraian" class="form-control @error('pertanyaan5_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan6">Bila diterima, kapankah anda bisa mulai kerja?</label>
+                                    </div>  
+                                </div> 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="pertanyaan6_uraian">Uraian:</label>
+                                        <textarea name="pertanyaan6_uraian" id="pertanyaan6_uraian" class="form-control @error('pertanyaan6_uraian') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                    </div>  
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <hr class="border-secondary">
+                                    </div> 
+                                </div> 
+
+                                {{-- pernyataan  --}}
+                                <div class="col-md-12">
+                                    <p class="text-center text-capitalize font-weight-bold">Pernyataan</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-check form-check">
+                                        <input class="form-check-input" type="checkbox" id="pernyataan" value="yes">
+                                        <label class="form-check-label" for="pernyataan"> Dengan ini saya menyatakan bahwa keterangan yang saya berikan diatas adalah benar isinya, Bilamana ternyata terdapat ketidakbenaran, saya bertanggung jawab penuh atas akibatnya.</label>
+                                    </div>
+                                </div>
 
                                 {{-- footer  --}}
                                 <div class="col-md-12">
@@ -733,10 +867,26 @@
 @section('script')
 <script>
     $(document).ready(function() {
+
+        $('#nomor_ktp').on('keyup', function() {
+            var jml_karakter = $(this).val();
+            if (jml_karakter.length == 16) {
+                var provinsi = jml_karakter.substring(0,2);
+                var kabupaten = jml_karakter.substring(0,4);
+                var kecamatan = jml_karakter.substring(0,6);
+                var tanggal_lahir = jml_karakter.substring(6,12);
+                console.log("provinsi " + provinsi + " kabupaten " + kabupaten + " kecamatan " + kecamatan + " tanggal lahir " + tanggal_lahir);
+            }
+        });
+
+        function ktp(nomor_ktp) {
+
+        }
         
         $('#jenis_kelamin').on('change', function() {
-            $('#status_perkawinan').empty();
+
             var jenis_kelamin_value = $('#jenis_kelamin').val();
+            $('#status_perkawinan').empty();
 
             var jenis_kelamin = "" +
                 "<option value=\"\">--Pilih Status--</option>" +
@@ -753,11 +903,30 @@
         });
 
         $('#status_perkawinan').on('change', function() {
+
+            var jenis_kelamin_value = $('#jenis_kelamin').val();
             var status_perkawinan_value = $('#status_perkawinan').val();
+
             if (status_perkawinan_value == 1) {
                 $('#susunan_keluarga_setelah_menikah').hide();
+            } else if (status_perkawinan_value == 2) {
+                $('#susunan_keluarga_setelah_menikah').show();
+                if (jenis_kelamin_value == "l") {
+                    $('#istri').show();
+                    $('#suami').hide();
+                } else {
+                    $('#istri').hide();
+                    $('#suami').show();
+                }
             } else {
                 $('#susunan_keluarga_setelah_menikah').show();
+                if (jenis_kelamin_value == "l") {
+                    $('#istri').hide();
+                    $('#suami').hide();
+                } else {
+                    $('#istri').hide();
+                    $('#suami').hide();
+                }
             }
         });
 
@@ -838,6 +1007,26 @@
                     "</div><hr>";
 
                 $('#anak').append(form_anak);
+            }
+        });
+
+        $('#pendidikan_tingkat').on('change', function() {
+            
+            $('.nama_gedung').empty();
+            $('.jurusan').empty();
+            var pendidikan_tingkat_value = $('#pendidikan_tingkat').val();
+            var form_jurusan = "" +
+                "<label for=\"pendidikan_jurusan\">Jurusan</label>" +
+                "<input type=\"text\" name=\"pendidikan_jurusan\" class=\"form-control @error('pendidikan_jurusan') is-invalid @enderror\" id=\"pendidikan_jurusan\" placeholder=\"\" required>";
+
+            if (pendidikan_tingkat_value == 1 || pendidikan_tingkat_value == 2) {
+                $('.nama_gedung').append('Sekolah');
+            } else if (pendidikan_tingkat_value == 3) {
+                $('.nama_gedung').append('Sekolah');
+                $('.jurusan').append(form_jurusan);
+            } else {
+                $('.nama_gedung').append('Kampus');
+                $('.jurusan').append(form_jurusan);
             }
         });
     });
