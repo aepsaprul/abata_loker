@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::put('/home/persyaratan/update', [HomeController::class, 'persyaratanUpdate'])->name('home.persyaratan.update');
+Route::put('/home/rekrutmen/update', [HomeController::class, 'rekrutmenUpdate'])->name('home.rekrutmen.update');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/client', [ClientController::class, 'index'])->name('client');
