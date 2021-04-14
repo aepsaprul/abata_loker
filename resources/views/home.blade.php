@@ -291,66 +291,11 @@
                                             <p class="text-center text-capitalize font-weight-bold">Susunan Keluarga Setelah Menikah</p>
                                         </div>
 
-
-                                        {{-- istri  --}}
-                                        <div id="istri" class="container">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="nama_istri">Nama Istri</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_nama[]" class="form-control @error('nama_istri') is-invalid @enderror" id="nama_istri" placeholder="">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="tempat_lahir_istri">Tempat Lahir Istri</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_tempat_lahir[]" class="form-control @error('tempat_lahir_istri') is-invalid @enderror" id="tempat_lahir_istri" placeholder="">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="tanggal_lahir_istri">Tanggal Lahir Istri</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_tanggal_lahir[]" class="form-control @error('tanggal_lahir_istri') is-invalid @enderror" id="tanggal_lahir_istri" placeholder="">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="pekerjaan_terakhir_istri">Pekerjaan Terakhir Istri</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_pekerjaan_terakhir[]" class="form-control @error('pekerjaan_terakhir_istri') is-invalid @enderror" id="pekerjaan_terakhir_istri" placeholder="">
-                                                    </div>  
-                                                </div>
-                                            </div>
+                                        {{-- hubungan  --}}
+                                        <div id="hubungan" class="container">
+                                            
                                         </div>
 
-                                        {{-- suami  --}}
-                                        <div id="suami" class="container">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="nama_suami">Nama Suami</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_nama[]" class="form-control @error('nama_suami') is-invalid @enderror" id="nama_suami">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="tempat_lahir_suami">Tempat Lahir Suami</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_tempat_lahir[]" class="form-control @error('tempat_lahir_suami') is-invalid @enderror" id="tempat_lahir_suami">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="tanggal_lahir_suami">Tanggal Lahir Suami</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_tanggal_lahir[]" class="form-control @error('tanggal_lahir_suami') is-invalid @enderror" id="tanggal_lahir_suami" placeholder="">
-                                                    </div>  
-                                                </div> 
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                    <div class="form-group">
-                                                        <label for="pekerjaan_terakhir_suami">Pekerjaan Terakhir Suami</label>
-                                                        <input type="text" name="keluarga_setelah_menikah_pekerjaan_terakhir[]" class="form-control @error('pekerjaan_terakhir_suami') is-invalid @enderror" id="pekerjaan_terakhir_suami" placeholder="">
-                                                    </div>  
-                                                </div> 
-                                            </div>
-                                        </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="jml_anak">Jumlah Anak</label>
@@ -393,7 +338,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="kerabat_jenis_kelamin">Jenis Kelamin</label>
-                                        <input type="text" name="kerabat_jenis_kelamin" class="form-control @error('kerabat_jenis_kelamin') is-invalid @enderror" id="kerabat_jenis_kelamin" placeholder="">
+                                        <input type="text" name="kerabat_jenis_kelamin" class="form-control @error('kerabat_jenis_kelamin') is-invalid @enderror" id="kerabat_jenis_kelamin" placeholder="L/P">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
@@ -454,14 +399,14 @@
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
-                                        <label for="pendikan_tahun_masuk">Tahun Masuk</label>
-                                        <input type="text" name="pendikan_tahun_masuk" class="form-control @error('pendikan_tahun_masuk') is-invalid @enderror" id="pendikan_tahun_masuk" placeholder="">
+                                        <label for="pendidikan_tahun_masuk">Tahun Masuk</label>
+                                        <input type="text" name="pendidikan_tahun_masuk" class="form-control @error('pendidikan_tahun_masuk') is-invalid @enderror" id="pendidikan_tahun_masuk" placeholder="">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
-                                        <label for="pendikan_tahun_lulus">Tahun Lulus</label>
-                                        <input type="text" name="pendikan_tahun_lulus" class="form-control @error('pendikan_tahun_lulus') is-invalid @enderror" id="pendikan_tahun_lulus" placeholder="">
+                                        <label for="pendidikan_tahun_lulus">Tahun Lulus</label>
+                                        <input type="text" name="pendidikan_tahun_lulus" class="form-control @error('pendidikan_tahun_lulus') is-invalid @enderror" id="pendidikan_tahun_lulus" placeholder="">
                                     </div>  
                                 </div>                               
                                 <div class="col-md-12">
@@ -472,37 +417,26 @@
 
                                 {{-- pelatihan  --}}
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Pelatihan / Kursus (jika ada)</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Pelatihan / Kursus</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pelatihan_nama">Nama Pelatiahan 1</label>
-                                        <input type="text" name="pelatihan_nama[]" class="form-control @error('[]') is-invalid @enderror" id="pelatihan_nama" placeholder="">
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pelatihan_tahun">Tahun</label>
-                                        <input type="text" name="pelatihan_tahun[]" class="form-control @error('pelatihan_tahun') is-invalid @enderror" id="pelatihan_tahun" placeholder="">
-                                    </div>  
-                                </div>                              
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <hr class="border-secondary">
-                                    </div> 
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="pelatihan_nama">Nama Pelatiahan 2</label>
-                                        <input type="text" name="pelatihan_nama[]" class="form-control @error('pelatihan_nama') is-invalid @enderror" id="pelatihan_nama" placeholder="">
+                                        <label>Apakah anda punya riwayat pelatihan / kursus? Jika ada, berapa dan sebutkan</label>
                                     </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                </div>
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pelatihan_tahun">Tahun</label>
-                                        <input type="text" name="pelatihan_tahun[]" class="form-control @error('pelatihan_tahun') is-invalid @enderror" id="pelatihan_tahun" placeholder="">
+                                        <label for="jml_riwayat_pelatihan">Jumlah Riwayat Pelatihan</label>
+                                        <select name="jml_riwayat_pelatihan" id="jml_riwayat_pelatihan" class="form-control @error('jml_riwayat_pelatihan') is-invalid @enderror">
+                                            <option value="0">Tidak Ada</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
                                     </div>  
-                                </div>                              
+                                </div>
+                                <div id="riwayat_pelatihan" class="container">
+                                    
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <hr class="border-secondary">
@@ -511,32 +445,26 @@
 
                                 {{-- penghargaan  --}}
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Penghargaan (jika ada)</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Penghargaan</p>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="penghargaan_nama">Nama Penghargaan 1</label>
-                                        <input type="text" name="penghargaan_nama[]" class="form-control @error('penghargaan_nama') is-invalid @enderror" id="penghargaan_nama" placeholder="">
+                                        <label>Apakah anda punya riwayat penghargaan? Jika ada, berapa dan sebutkan</label>
                                     </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                </div>
+                                <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="penghargaan_tahun">Tahun</label>
-                                        <input type="text" name="penghargaan_tahun[]" class="form-control @error('penghargaan_tahun') is-invalid @enderror" id="penghargaan_tahun" placeholder="">
+                                        <label for="jml_riwayat_penghargaan">Jumlah Riwayat Penghargaan</label>
+                                        <select name="jml_riwayat_penghargaan" id="jml_riwayat_penghargaan" class="form-control @error('jml_riwayat_penghargaan') is-invalid @enderror">
+                                            <option value="0">Tidak Ada</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
                                     </div>  
-                                </div>       
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="penghargaan_nama">Nama Penghargaan 2</label>
-                                        <input type="text" name="penghargaan_nama[]" class="form-control @error('penghargaan_nama') is-invalid @enderror" id="penghargaan_nama" placeholder="">
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="penghargaan_tahun">Tahun</label>
-                                        <input type="text" name="penghargaan_tahun[]" class="form-control @error('penghargaan_tahun') is-invalid @enderror" id="penghargaan_tahun" placeholder="">
-                                    </div>  
-                                </div>                              
+                                </div>
+                                <div id="riwayat_penghargaan" class="container">
+                                    
+                                </div>                             
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <hr class="border-secondary">
@@ -545,44 +473,26 @@
 
                                 {{-- pengalaman organisasi  --}}
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Pengalaman Organisasi (jika ada)</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Pengalaman Organisasi</p>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="organisasi_nama">Nama Organisasi 1</label>
-                                        <input type="text" name="organisasi_nama[]" class="form-control @error('organisasi_nama') is-invalid @enderror" id="organisasi_nama" placeholder="">
+                                        <label>Apakah anda punya riwayat organisasi? Jika ada, berapa dan sebutkan</label>
                                     </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="organisasi_jabatan">Jabatan</label>
-                                        <input type="text" name="organisasi_jabatan[]" class="form-control @error('organisasi_jabatan') is-invalid @enderror" id="organisasi_jabatan" placeholder="">
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="organisasi_masa_kerja">Masa Kerja</label>
-                                        <input type="text" name="organisasi_masa_kerja[]" class="form-control @error('organisasi_masa_kerja') is-invalid @enderror" id="organisasi_masa_kerja" placeholder="">
-                                    </div>  
-                                </div> 
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="organisasi_nama">Nama Organisasi 2</label>
-                                        <input type="text" name="organisasi_nama[]" class="form-control @error('organisasi_nama') is-invalid @enderror" id="organisasi_nama" placeholder="">
+                                        <label for="jml_riwayat_organisasi">Jumlah Riwayat organisasi</label>
+                                        <select name="jml_riwayat_organisasi" id="jml_riwayat_organisasi" class="form-control @error('jml_riwayat_organisasi') is-invalid @enderror">
+                                            <option value="0">Tidak Ada</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
                                     </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="organisasi_jabatan">Jabatan</label>
-                                        <input type="text" name="organisasi_jabatan[]" class="form-control @error('organisasi_jabatan') is-invalid @enderror" id="organisasi_jabatan" placeholder="">
-                                    </div>  
-                                </div> 
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="form-group">
-                                        <label for="organisasi_masa_kerja">Masa Kerja</label>
-                                        <input type="text" name="organisasi_masa_kerja[]" class="form-control @error('organisasi_masa_kerja') is-invalid @enderror" id="organisasi_masa_kerja" placeholder="">
-                                    </div>  
-                                </div> 
+                                </div>
+                                <div id="riwayat_organisasi" class="container">
+                                    
+                                </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <hr class="border-secondary">
@@ -591,7 +501,7 @@
 
                                 {{-- riwayat pekerjaan terkahir  --}}
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Riwayat Pekerjaan Di Perusahaan Terakhir (jika ada)</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Riwayat Pekerjaan Di Perusahaan Terakhir</p>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -946,6 +856,8 @@
 
         $('#status_perkawinan').on('change', function() {
 
+            $('#hubungan').empty();
+
             var jenis_kelamin_value = $('#jenis_kelamin').val();
             var status_perkawinan_value = $('#status_perkawinan').val();
 
@@ -954,24 +866,71 @@
             } else if (status_perkawinan_value == 2) {
                 $('#susunan_keluarga_setelah_menikah').show();
 
-                
+                var hubungan_istri = "" +
+                    "<input type=\"hidden\" name=\"keluarga_setelah_menikah_hubungan[]\" class=\"form-control\" value=\"istri\">" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"nama_istri\">Nama Istri</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control @error('nama_istri') is-invalid @enderror\" id=\"nama_istri\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"tempat_lahir_istri\">Tempat Lahir Istri</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control @error('tempat_lahir_istri') is-invalid @enderror\" id=\"tempat_lahir_istri\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"tanggal_lahir_istri\">Tanggal Lahir Istri</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control @error('tanggal_lahir_istri') is-invalid @enderror\" id=\"tanggal_lahir_istri\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_terakhir_istri\">Pekerjaan Terakhir Istri</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_istri') is-invalid @enderror\" id=\"pekerjaan_terakhir_istri\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>";
+
+                var hubungan_suami = "" +
+                    "<input type=\"hidden\" name=\"keluarga_setelah_menikah_hubungan[]\" class=\"form-control\" value=\"suami\">" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"nama_suami\">Nama Suami</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control @error('nama_suami') is-invalid @enderror\" id=\"nama_suami\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"tempat_lahir_suami\">Tempat Lahir Suami</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control @error('tempat_lahir_suami') is-invalid @enderror\" id=\"tempat_lahir_suami\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"tanggal_lahir_suami\">Tanggal Lahir Suami</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control @error('tanggal_lahir_suami') is-invalid @enderror\" id=\"tanggal_lahir_suami\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_terakhir_suami\">Pekerjaan Terakhir Suami</label>" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_suami') is-invalid @enderror\" id=\"pekerjaan_terakhir_suami\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>";
 
                 if (jenis_kelamin_value == "l") {
-                    $('#istri').show();
-                    $('#suami').hide();
+                    $('#hubungan').append(hubungan_istri);
                 } else {
-                    $('#istri').hide();
-                    $('#suami').show();
+                    $('#hubungan').append(hubungan_suami);
                 }
             } else {
                 $('#susunan_keluarga_setelah_menikah').show();
-                if (jenis_kelamin_value == "l") {
-                    $('#istri').hide();
-                    $('#suami').hide();
-                } else {
-                    $('#istri').hide();
-                    $('#suami').hide();
-                }
             }
         });
 
@@ -1025,6 +984,7 @@
 
             for (let index = 1; index <= jml_anak; index++) {    
                 var form_anak = "" +
+                    "<input type=\"hidden\" name=\"keluarga_setelah_menikah_hubungan[]\" class=\"form-control\" value=\"anak\">" +
                     "<div class=\"row\">" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
@@ -1085,6 +1045,103 @@
             else if (this.value == 'tidak') {
                 $('#riwayat_pekerjaan').hide();
             }
+        });
+
+        $('#jml_riwayat_pelatihan').on('change', function() {
+
+            var jml_pelatihan = $('#jml_riwayat_pelatihan').val();
+            $('#riwayat_pelatihan').empty();
+
+            for (let index = 1; index <= jml_pelatihan; index++) {
+                var pelatihan_value = "" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-md-12\">" +
+                            "<div class=\"form-group\">" +
+                                "<hr class=\"border-secondary\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pelatihan_nama\">Nama Pelatihan " + index + "</label>" +
+                                "<input type=\"text\" name=\"pelatihan_nama[]\" class=\"form-control @error('pelatihan_nama') is-invalid @enderror\" id=\"pelatihan_nama\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pelatihan_tahun\">Tahun</label>" +
+                                "<input type=\"text\" name=\"pelatihan_tahun[]\" class=\"form-control @error('pelatihan_tahun') is-invalid @enderror\" id=\"pelatihan_tahun\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>";
+
+                $('#riwayat_pelatihan').append(pelatihan_value);
+            }
+
+        });
+
+        $('#jml_riwayat_penghargaan').on('change', function() {
+
+            var jml_penghargaan = $('#jml_riwayat_penghargaan').val();
+            $('#riwayat_penghargaan').empty();
+
+            for (let index = 1; index <= jml_penghargaan; index++) {
+                var penghargaan_value = "" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-md-12\">" +
+                            "<div class=\"form-group\">" +
+                                "<hr class=\"border-secondary\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"penghargaan_nama\">Nama penghargaan " + index + "</label>" +
+                                "<input type=\"text\" name=\"penghargaan_nama[]\" class=\"form-control @error('penghargaan_nama') is-invalid @enderror\" id=\"penghargaan_nama\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"penghargaan_tahun\">Tahun</label>" +
+                                "<input type=\"text\" name=\"penghargaan_tahun[]\" class=\"form-control @error('penghargaan_tahun') is-invalid @enderror\" id=\"penghargaan_tahun\" placeholder=\"\">" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>";
+
+                $('#riwayat_penghargaan').append(penghargaan_value);
+            }
+
+        });
+
+        $('#jml_riwayat_organisasi').on('change', function() {
+
+            var jml_organisasi = $('#jml_riwayat_organisasi').val();
+            $('#riwayat_organisasi').empty();
+
+            for (let index = 1; index <= jml_organisasi; index++) {
+                var organisasi_value = "" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-md-12\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"organisasi_nama\">Nama Organisasi " + index + "</label>" +
+                                "<input type=\"text\" name=\"organisasi_nama[]\" class=\"form-control @error('organisasi_nama') is-invalid @enderror\" id=\"organisasi_nama\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"organisasi_jabatan\">Jabatan</label>" +
+                                "<input type=\"text\" name=\"organisasi_jabatan[]\" class=\"form-control @error('organisasi_jabatan') is-invalid @enderror\" id=\"organisasi_jabatan\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"organisasi_masa_kerja\">Masa Kerja</label>" +
+                                "<input type=\"text\" name=\"organisasi_masa_kerja[]\" class=\"form-control @error('organisasi_masa_kerja') is-invalid @enderror\" id=\"organisasi_masa_kerja\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" +
+                    "</div>";
+
+                $('#riwayat_organisasi').append(organisasi_value);
+            }
+
         });
     });
 </script>

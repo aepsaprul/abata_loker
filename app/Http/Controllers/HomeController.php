@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\HcLoker;
 use App\Models\HcLamaran;
+use App\Models\HcPelatihan;
+use App\Models\HcOrganisasi;
+use App\Models\HcPendidikan;
 use Illuminate\Http\Request;
 use App\Models\HcMediaSosial;
+use App\Models\HcPenghargaan;
 use App\Models\HcKerabatDarurat;
 use Illuminate\Support\Facades\Auth;
 use App\Models\HcKeluargaSebelumMenikah;
@@ -55,7 +59,7 @@ class HomeController extends Controller
 
     public function rekrutmenUpdate(Request $request)
     {
-        dd($request);
+        // dd($request);
         // $lamaran = HcLamaran::where('email', Auth::user()->email)->first();
         // $lamaran->nama_panggilan = $request->nama_panggilan;
         // $lamaran->nomor_ktp = $request->nomor_ktp;
@@ -89,24 +93,16 @@ class HomeController extends Controller
         //     $keluarga_sebelum_menikah->save();
         // }
 
-        if ($request->jenis_kelamin == 'l') {
-            $hubungan = "istri";
-        } else if ($request->jenis_kelamin == 'p') {
-            $hubungan = "suami";
-        } else {
-            $hubungan = "anak";
-        }
-
-        foreach ($request->keluarga_setelah_menikah_nama as $key => $value) {
-            $keluarga_setelah_menikah = new HcKeluargaSetelahMenikah;
-            $keluarga_setelah_menikah->email = Auth::user()->email;
-            $keluarga_setelah_menikah->hubungan = $hubungan;
-            $keluarga_setelah_menikah->nama = $request->keluarga_setelah_menikah_nama[$key];
-            $keluarga_setelah_menikah->tempat_lahir = $request->keluarga_setelah_menikah_tempat_lahir[$key];
-            $keluarga_setelah_menikah->tanggal_lahir = $request->keluarga_setelah_menikah_tanggal_lahir[$key];
-            $keluarga_setelah_menikah->pekerjaan_terakhir = $request->keluarga_setelah_menikah_pekerjaan_terakhir[$key];
-            $keluarga_setelah_menikah->save();
-        }
+        // foreach ($request->keluarga_setelah_menikah_hubungan as $key => $value) {
+        //     $keluarga_setelah_menikah = new HcKeluargaSetelahMenikah;
+        //     $keluarga_setelah_menikah->email = Auth::user()->email;
+        //     $keluarga_setelah_menikah->hubungan = $value;
+        //     $keluarga_setelah_menikah->nama = $request->keluarga_setelah_menikah_nama[$key];
+        //     $keluarga_setelah_menikah->tempat_lahir = $request->keluarga_setelah_menikah_tempat_lahir[$key];
+        //     $keluarga_setelah_menikah->tanggal_lahir = $request->keluarga_setelah_menikah_tanggal_lahir[$key];
+        //     $keluarga_setelah_menikah->pekerjaan_terakhir = $request->keluarga_setelah_menikah_pekerjaan_terakhir[$key];
+        //     $keluarga_setelah_menikah->save();
+        // }
 
         // $kerabat = new HcKerabatDarurat;
         // $kerabat->email = Auth::user()->email;
@@ -127,24 +123,30 @@ class HomeController extends Controller
         // $pendidikan->tahun_lulus = $request->pendidikan_tahun_lulus;
         // $pendidikan->save();
 
-        // $pelatihan = new HcPelatihan;
-        // $pelatihan->email = Auth::user()->email;
-        // $pelatihan->nama = $request->pelatihan_nama;
-        // $pelatihan->tahun = $request->pelatihan_tahun;
-        // $pelatihan->save();
+        foreach ($request->pelatihan_nama as $key => $value) {
+            $pelatihan = new HcPelatihan;
+            $pelatihan->email = Auth::user()->email;
+            $pelatihan->nama = $value;
+            $pelatihan->tahun = $request->pelatihan_tahun[$key];
+            $pelatihan->save();
+        }
 
-        // $penghargaan = new HcPenghargaan;
-        // $penghargaan->email = Auth::user()->email;
-        // $penghargaan->nama = $request->penghargaan_nama;
-        // $penghargaan->tahun = $request->penghargaan_tahun;
-        // $penghargaan->save();
+        foreach ($request->penghargaan_nama as $key => $value) {
+            $penghargaan = new HcPenghargaan;
+            $penghargaan->email = Auth::user()->email;
+            $penghargaan->nama = $value;
+            $penghargaan->tahun = $request->penghargaan_tahun[$key];
+            $penghargaan->save();
+        }
 
-        // $organisasi = new HcOrganisasi;
-        // $organisasi->email = Auth::user()->email;
-        // $organisasi->nama = $request->organisasi_nama;
-        // $organisasi->jabatan = $request->organisasi_jabatan;
-        // $organisasi->masa_kerja = $request->organisasi_masa_kerja;
-        // $organisasi->save();
+        foreach ($request->organisasi_nama as $key => $value) {
+            $organisasi = new HcOrganisasi;
+            $organisasi->email = Auth::user()->email;
+            $organisasi->nama = $value;
+            $organisasi->jabatan = $request->organisasi_jabatan[$key];
+            $organisasi->masa_kerja = $request->organisasi_masa_kerja[$key];
+            $organisasi->save();
+        }
 
         // foreach ($request->pekerjaan_nama as $key => $value) {
         //     $pekerjaan = new HcRiwayatPekerjaan;
