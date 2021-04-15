@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use App\Models\HcMediaSosial;
 use App\Models\HcPenghargaan;
 use App\Models\HcKerabatDarurat;
+use App\Models\HcRiwayatPekerjaan;
+use App\Models\HcPertanyaanTambahan;
 use Illuminate\Support\Facades\Auth;
 use App\Models\HcKeluargaSebelumMenikah;
 use App\Models\HcKeluargaSetelahMenikah;
@@ -59,7 +61,7 @@ class HomeController extends Controller
 
     public function rekrutmenUpdate(Request $request)
     {
-        // dd($request);
+        // dd($data_jawaban);
         // $lamaran = HcLamaran::where('email', Auth::user()->email)->first();
         // $lamaran->nama_panggilan = $request->nama_panggilan;
         // $lamaran->nomor_ktp = $request->nomor_ktp;
@@ -123,56 +125,65 @@ class HomeController extends Controller
         // $pendidikan->tahun_lulus = $request->pendidikan_tahun_lulus;
         // $pendidikan->save();
 
-        foreach ($request->pelatihan_nama as $key => $value) {
-            $pelatihan = new HcPelatihan;
-            $pelatihan->email = Auth::user()->email;
-            $pelatihan->nama = $value;
-            $pelatihan->tahun = $request->pelatihan_tahun[$key];
-            $pelatihan->save();
-        }
+        // foreach ($request->pelatihan_nama as $key => $value) {
+        //     $pelatihan = new HcPelatihan;
+        //     $pelatihan->email = Auth::user()->email;
+        //     $pelatihan->nama = $value;
+        //     $pelatihan->tahun = $request->pelatihan_tahun[$key];
+        //     $pelatihan->save();
+        // }
 
-        foreach ($request->penghargaan_nama as $key => $value) {
-            $penghargaan = new HcPenghargaan;
-            $penghargaan->email = Auth::user()->email;
-            $penghargaan->nama = $value;
-            $penghargaan->tahun = $request->penghargaan_tahun[$key];
-            $penghargaan->save();
-        }
+        // foreach ($request->penghargaan_nama as $key => $value) {
+        //     $penghargaan = new HcPenghargaan;
+        //     $penghargaan->email = Auth::user()->email;
+        //     $penghargaan->nama = $value;
+        //     $penghargaan->tahun = $request->penghargaan_tahun[$key];
+        //     $penghargaan->save();
+        // }
 
-        foreach ($request->organisasi_nama as $key => $value) {
-            $organisasi = new HcOrganisasi;
-            $organisasi->email = Auth::user()->email;
-            $organisasi->nama = $value;
-            $organisasi->jabatan = $request->organisasi_jabatan[$key];
-            $organisasi->masa_kerja = $request->organisasi_masa_kerja[$key];
-            $organisasi->save();
-        }
+        // foreach ($request->organisasi_nama as $key => $value) {
+        //     $organisasi = new HcOrganisasi;
+        //     $organisasi->email = Auth::user()->email;
+        //     $organisasi->nama = $value;
+        //     $organisasi->jabatan = $request->organisasi_jabatan[$key];
+        //     $organisasi->masa_kerja = $request->organisasi_masa_kerja[$key];
+        //     $organisasi->save();
+        // }
 
         // foreach ($request->pekerjaan_nama as $key => $value) {
         //     $pekerjaan = new HcRiwayatPekerjaan;
         //     $pekerjaan->email = Auth::user()->email;
-        //     $pekerjaan->nama_perusahaan = $request->pekerjaan_nama;
-        //     $pekerjaan->jenis_industri = $request->pekerjaan_jenis_industri;
-        //     $pekerjaan->jabatan_awal = $request->pekerjaan_jabatan_awal;
-        //     $pekerjaan->jabatan_akhir = $request->pekerjaan_jabatan_akhir;
-        //     $pekerjaan->awal_bekerja = $request->pekerjaan_awal_bekerja;
-        //     $pekerjaan->akhir_bekerja = $request->pekerjaan_akhir_bekerja;
-        //     $pekerjaan->gaji_awal = $request->pekerjaan_gaji_awal;
-        //     $pekerjaan->gaji_akhir = $request->pekerjaan_gaji_akhir;
-        //     $pekerjaan->nama_atasan = $request->pekerjaan_nama_atasan;
-        //     $pekerjaan->alasan_berhenti = $request->pekerjaan_alasan_berhenti;
+        //     $pekerjaan->nama_perusahaan = $request->pekerjaan_nama[$key];
+        //     $pekerjaan->jenis_industri = $request->pekerjaan_jenis_industri[$key];
+        //     $pekerjaan->jabatan_awal = $request->pekerjaan_jabatan_awal[$key];
+        //     $pekerjaan->jabatan_akhir = $request->pekerjaan_jabatan_akhir[$key];
+        //     $pekerjaan->awal_bekerja = $request->pekerjaan_awal_bekerja[$key];
+        //     $pekerjaan->akhir_bekerja = $request->pekerjaan_akhir_bekerja[$key];
+        //     $pekerjaan->gaji_awal = $request->pekerjaan_gaji_awal[$key];
+        //     $pekerjaan->gaji_akhir = $request->pekerjaan_gaji_akhir[$key];
+        //     $pekerjaan->nama_atasan = $request->pekerjaan_nama_atasan[$key];
+        //     $pekerjaan->alasan_berhenti = $request->pekerjaan_alasan_berhenti[$key];
         //     $pekerjaan->save();
         // }
 
-        // foreach ($request->pertanyaan_tambahan as $key => $value) {
+        $data_jawaban = [
+            $request->jawaban_1,
+            $request->jawaban_2,
+            $request->jawaban_3,
+            $request->jawaban_4,
+            $request->jawaban_5,
+            $request->jawaban_6,
+        ];
 
-        //     $index = $key + 1;
-        //     $pertanyaan_tambahan = new HcPertanyaanTambahan;
-        //     $pertanyaan_tambahan->email = Auth::user()->email;
-        //     $pertanyaan_tambahan->master_pertanyaan_id = $key + 1;
-        //     $pertanyaan_tambahan->jawaban = $request->jawaban_ . $index;
-        //     $pertanyaan_tambahan->uraian = $request->jawaban_uraian_ . $index;
-        //     $pertanyaan_tambahan->save();
-        // }
+        foreach ($request->pertanyaan as $key => $value) {
+
+            $index = $key + 1;
+            $pertanyaan_tambahan = new HcPertanyaanTambahan;
+            $pertanyaan_tambahan->email = Auth::user()->email;
+            $pertanyaan_tambahan->master_pertanyaan_tambahan_id = $key + 1;
+            $pertanyaan_tambahan->jawaban = $data_jawaban[$key];
+            $pertanyaan_tambahan->uraian = $request->jawaban_uraian[$key];
+            $pertanyaan_tambahan->save();
+        }
     }
 }

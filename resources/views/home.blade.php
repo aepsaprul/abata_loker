@@ -482,7 +482,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="jml_riwayat_organisasi">Jumlah Riwayat organisasi</label>
+                                        <label for="jml_riwayat_organisasi">Jumlah Riwayat Organisasi</label>
                                         <select name="jml_riwayat_organisasi" id="jml_riwayat_organisasi" class="form-control @error('jml_riwayat_organisasi') is-invalid @enderror">
                                             <option value="0">Tidak Ada</option>
                                             <option value="1">1</option>
@@ -501,95 +501,26 @@
 
                                 {{-- riwayat pekerjaan terkahir  --}}
                                 <div class="col-md-12">
-                                    <p class="text-center text-capitalize font-weight-bold">Riwayat Pekerjaan Di Perusahaan Terakhir</p>
+                                    <p class="text-center text-capitalize font-weight-bold">Riwayat Pekerjaan</p>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan1">Apakah anda punya riwayat pekerjaan?</label>
+                                        <label for="pertanyaan1">Apakah anda punya riwayat pekerjaan? Jika ada, berapa dan sebutkan</label>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="pekerjaan_radio" id="pekerjaan_radio_1" value="ya">
-                                        <label class="form-check-label" for="pekerjaan_radio_1">Ya</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="pekerjaan_radio" id="pekerjaan_radio_2" value="tidak">
-                                        <label class="form-check-label" for="pekerjaan_radio_2">Tidak</label>
+                                    <div class="form-group">
+                                        <label for="jml_riwayat_pekerjaan">Jumlah Riwayat Pekerjaan</label>
+                                        <select name="jml_riwayat_pekerjaan" id="jml_riwayat_pekerjaan" class="form-control @error('jml_riwayat_pekerjaan') is-invalid @enderror">
+                                            <option value="0">Tidak Ada</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
                                     </div>  
                                 </div>
-                                <br><br>
-                                <div class="container" id="riwayat_pekerjaan">
-                                    <div class="row">
-                                        @for ($i = 1; $i <= 3; $i++)
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_nama">Nama Perusahaan {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_nama" class="form-control @error('pekerjaan_nama') is-invalid @enderror" id="pekerjaan_nama" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_jenis_industri">Jenis Industri {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_jenis_industri" class="form-control @error('pekerjaan_jenis_industri') is-invalid @enderror" id="pekerjaan_jenis_industri" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_jabatan_awal">Jabatan Awal {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_jabatan_awal" class="form-control @error('pekerjaan_jabatan_awal') is-invalid @enderror" id="pekerjaan_jabatan_awal" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_jabatan_akhir">Jabatan Akhir {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_jabatan_akhir" class="form-control @error('pekerjaan_jabatan_akhir') is-invalid @enderror" id="pekerjaan_jabatan_akhir" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_awal_bekerja">Awal Bekerja {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_awal_bekerja" class="form-control @error('pekerjaan_awal_bekerja') is-invalid @enderror" id="pekerjaan_awal_bekerja" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_akhir_bekerja">Akhir Bekerja {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_akhir_bekerja" class="form-control @error('pekerjaan_akhir_bekerja') is-invalid @enderror" id="pekerjaan_akhir_bekerja" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_gaji_awal">Gaji Awal {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_gaji_awal" class="form-control @error('pekerjaan_gaji_awal') is-invalid @enderror" id="pekerjaan_gaji_awal" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_gaji_akhir">Gaji Akhir {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_gaji_akhir" class="form-control @error('pekerjaan_gaji_akhir') is-invalid @enderror" id="pekerjaan_gaji_akhir" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_nama_atasan">Nama Atasan Langsung {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_nama_atasan" class="form-control @error('pekerjaan_nama_atasan') is-invalid @enderror" id="pekerjaan_nama_atasan" placeholder="">
-                                                </div>  
-                                            </div> 
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div class="form-group">
-                                                    <label for="pekerjaan_alasan_berhenti">Alasan Berhenti {{ $i }}</label>
-                                                    <input type="text" name="pekerjaan_alasan_berhenti" class="form-control @error('pekerjaan_alasan_berhenti') is-invalid @enderror" id="pekerjaan_alasan_berhenti" placeholder="">
-                                                </div>  
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label for="tugas_pokok">Uraikan Tugas Pokok Anda Di Perusahaan Terakhir {{ $i }}</label>
-                                                    <textarea name="tugas_pokok" id="tugas_pokok" class="form-control @error('tugas_pokok') is-invalid @enderror" cols="30" rows="3"></textarea>
-                                                </div>  
-                                            </div>
-                                        @endfor
-                                    </div>
+                                <div id="riwayat_pekerjaan" class="container">
+                                    
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -603,7 +534,8 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan1">Apakah anda sedang mengikuti peroses rekrutmen dan seleksi di perusahaan lain? Jika ya, sebutkan nama perusahaannya</label>
+                                        <label for="pertanyaan">Apakah anda sedang mengikuti peroses rekrutmen dan seleksi di perusahaan lain? Jika ya, sebutkan nama perusahaannya</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -619,12 +551,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_1">Uraian:</label>
-                                        <textarea name="jawaban_uraian_1" id="jawaban_uraian_1" class="form-control @error('jawaban_uraian_1') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_1" class="form-control @error('jawaban_uraian_1') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan2">Apakah anda bersedia dengan jam kerja shift dan system kontrak?</label>
+                                        <label for="pertanyaan">Apakah anda bersedia dengan jam kerja shift dan system kontrak?</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -640,12 +573,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_2">Uraian:</label>
-                                        <textarea name="jawaban_uraian_2" id="jawaban_uraian_2" class="form-control @error('jawaban_uraian_2') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_2" class="form-control @error('jawaban_uraian_2') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan3">Apa anda bersedia di tempatkan di segala posisi kerja? Sebutkan posisi yang anda inginkan dan mengapa</label>
+                                        <label for="pertanyaan">Apa anda bersedia di tempatkan di segala posisi kerja? Sebutkan posisi yang anda inginkan dan mengapa</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -661,46 +595,49 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_3">Uraian:</label>
-                                        <textarea name="jawaban_uraian_3" id="jawaban_uraian_3" class="form-control @error('jawaban_uraian_3') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_3" class="form-control @error('jawaban_uraian_3') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan4">Apa alasan anda mendaftar di perusahaan kami?</label>
+                                        <label for="pertanyaan">Apa alasan anda mendaftar di perusahaan kami?</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-check-input" type="radio" name="jawaban_4" id="pertanyaan3_tidak" value="null" checked>
+                                        <input class="form-check-input" type="radio" name="jawaban_4" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_4">Uraian:</label>
-                                        <textarea name="jawaban_uraian_4" id="jawaban_uraian_4" class="form-control @error('jawaban_uraian_4') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_4" class="form-control @error('jawaban_uraian_4') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan5">Bila diterima, berapa besar gaji dan fasilitas apa yang anda harapkan? Apakah menurut anda layak?</label>
+                                        <label for="pertanyaan">Bila diterima, berapa besar gaji dan fasilitas apa yang anda harapkan? Apakah menurut anda layak?</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-check-input" type="radio" name="jawaban_5" id="pertanyaan3_tidak" value="null" checked>
+                                        <input class="form-check-input" type="radio" name="jawaban_5" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_5">Uraian:</label>
-                                        <textarea name="jawaban_uraian_5" id="jawaban_uraian_5" class="form-control @error('jawaban_uraian_5') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_5" class="form-control @error('jawaban_uraian_5') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="pertanyaan6">Bila diterima, kapankah anda bisa mulai kerja?</label>
+                                        <label for="pertanyaan">Bila diterima, kapankah anda bisa mulai kerja?</label>
+                                        <input type="hidden" name="pertanyaan[]" id="">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input class="form-check-input" type="radio" name="jawaban_6" id="pertanyaan3_tidak" value="null" checked>
+                                        <input class="form-check-input" type="radio" name="jawaban_6" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_6">Uraian:</label>
-                                        <textarea name="jawaban_uraian_6" id="jawaban_uraian_6" class="form-control @error('jawaban_uraian_6') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_6" class="form-control @error('jawaban_uraian_6') is-invalid @enderror" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
@@ -1016,8 +953,6 @@
             }
         });
 
-        $('#riwayat_pekerjaan').hide();
-
         $('#pendidikan_tingkat').on('change', function() {
             
             $('.nama_gedung').empty();
@@ -1142,6 +1077,85 @@
                 $('#riwayat_organisasi').append(organisasi_value);
             }
 
+        });
+
+        $('#jml_riwayat_pekerjaan').on('change', function() {
+            var jml_pekerjaan = $('#jml_riwayat_pekerjaan').val();
+            $('#riwayat_pekerjaan').empty();
+
+            for (let index = 1; index <= jml_pekerjaan; index++) {
+                var pekerjaan_value = "" +
+                    "<div class=\"row\">" +
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_nama\">Nama Perusahaan " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_nama[]\" class=\"form-control @error('pekerjaan_nama') is-invalid @enderror\" id=\"pekerjaan_nama\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_jenis_industri\">Jenis Industri " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_jenis_industri[]\" class=\"form-control @error('pekerjaan_jenis_industri') is-invalid @enderror\" id=\"pekerjaan_jenis_industri\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_jabatan_awal\">Jabatan Awal " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_jabatan_awal[]\" class=\"form-control @error('pekerjaan_jabatan_awal') is-invalid @enderror\" id=\"pekerjaan_jabatan_awal\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_jabatan_akhir\">Jabatan Akhir " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_jabatan_akhir[]\" class=\"form-control @error('pekerjaan_jabatan_akhir') is-invalid @enderror\" id=\"pekerjaan_jabatan_akhir\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_awal_bekerja\">Awal Bekerja " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_awal_bekerja[]\" class=\"form-control @error('pekerjaan_awal_bekerja') is-invalid @enderror\" id=\"pekerjaan_awal_bekerja\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_akhir_bekerja\">Akhir Bekerja " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_akhir_bekerja[]\" class=\"form-control @error('pekerjaan_akhir_bekerja') is-invalid @enderror\" id=\"pekerjaan_akhir_bekerja\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_gaji_awal\">Gaji Awal " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_gaji_awal[]\" class=\"form-control @error('pekerjaan_gaji_awal') is-invalid @enderror\" id=\"pekerjaan_gaji_awal\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_gaji_akhir\">Gaji Akhir " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_gaji_akhir[]\" class=\"form-control @error('pekerjaan_gaji_akhir') is-invalid @enderror\" id=\"pekerjaan_gaji_akhir\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_nama_atasan\">Nama Atasan Langsung " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_nama_atasan[]\" class=\"form-control @error('pekerjaan_nama_atasan') is-invalid @enderror\" id=\"pekerjaan_nama_atasan\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" + 
+                        "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"pekerjaan_alasan_berhenti\">Alasan Berhenti " + index + "</label>" +
+                                "<input type=\"text\" name=\"pekerjaan_alasan_berhenti[]\" class=\"form-control @error('pekerjaan_alasan_berhenti') is-invalid @enderror\" id=\"pekerjaan_alasan_berhenti\" placeholder=\"\">" +
+                            "</div>" +  
+                        "</div>" +
+                        "<div class=\"col-md-12\">" +
+                            "<div class=\"form-group\">" +
+                                "<label for=\"tugas_pokok\">Uraikan Tugas Pokok Anda Di Perusahaan Terakhir " + index + "</label>" +
+                                "<textarea name=\"tugas_pokok\" id=\"tugas_pokok[]\" class=\"form-control @error('tugas_pokok') is-invalid @enderror\" cols=\"30\" rows=\"3\"></textarea>" +
+                            "</div>" +  
+                        "</div>" +
+                    "</div>";
+
+                $('#riwayat_pekerjaan').append(pekerjaan_value);
+            }
         });
     });
 </script>
