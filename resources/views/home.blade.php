@@ -652,7 +652,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-check form-check">
-                                        <input class="form-check-input" type="checkbox" id="pernyataan" value="yes">
+                                        <input class="form-check-input" type="checkbox" name="pernyataan" id="pernyataan" value="yes">
                                         <label class="form-check-label" for="pernyataan"> Dengan ini saya menyatakan bahwa keterangan yang saya berikan diatas adalah benar isinya, Bilamana ternyata terdapat ketidakbenaran, saya bertanggung jawab penuh atas akibatnya.</label>
                                     </div>
                                 </div>
@@ -670,7 +670,10 @@
                                 </div> 
                             </div>
                         </form>
-                    @else
+                        @elseif ($lamaran->status_lamaran == 3)
+                            <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">terima kasih</h3>
+                            <p class="text-center text-capitalize font-weight-bold">berkas sedang kami proses...</p>
+                        @else
                         {{-- form persyaratan  --}}
                         <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">selamat datang</h3>
                         <p class="text-center text-capitalize font-weight-bold">silahkan isi formulir dengan lengkap dan benar</p>
