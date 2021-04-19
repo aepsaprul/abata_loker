@@ -27,7 +27,7 @@
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="surat_lamaran">Scan Surat Lamaran (Format .jpg)</label>
+                                    <label for="surat_lamaran">Scan Surat Lamaran (max size 2MB)</label>
                                     <input type="file" name="surat_lamaran" class="form-control @error('surat_lamaran') is-invalid @enderror" id="surat_lamaran" autofocus value="{{ old('surat_lamaran') }}">
                                 </div> 
                             </div> 
@@ -694,25 +694,25 @@
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="surat_lamaran">Scan Surat Lamaran (Format .jpg)</label>
+                                        <label for="surat_lamaran">Scan Surat Lamaran (max size 2MB)</label>
                                         <input type="file" name="surat_lamaran" class="form-control @error('surat_lamaran') is-invalid @enderror" id="surat_lamaran" autofocus value="{{ old('surat_lamaran') }}">
                                     </div> 
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="curriculum_vitae">Scan Curriculum Vitae (Format .jpg)</label>
+                                        <label for="curriculum_vitae">Scan Curriculum Vitae (max size 2MB)</label>
                                         <input type="file" name="curriculum_vitae" class="form-control @error('curriculum_vitae') is-invalid @enderror" id="curriculum_vitae" autofocus value="{{ old('curriculum_vitae') }}">
                                     </div> 
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="ijazah">Scan Ijazah (Format .jpg)</label>
+                                        <label for="ijazah">Scan Ijazah (max size 2MB)</label>
                                         <input type="file" name="ijazah" class="form-control @error('ijazah') is-invalid @enderror" id="ijazah" autofocus value="{{ old('ijazah') }}">
                                     </div> 
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="transkip_nilai">Scan Transkip Nilai (Format .jpg)</label>
+                                        <label for="transkip_nilai">Scan Transkip Nilai (max size 2MB)</label>
                                         <input type="file" name="transkip_nilai" class="form-control @error('transkip_nilai') is-invalid @enderror" id="transkip_nilai" autofocus value="{{ old('transkip_nilai') }}">
                                     </div> 
                                 </div> 
@@ -724,13 +724,13 @@
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="kartu_keluarga">Scan Kartu Keluarga (Format .jpg)</label>
+                                        <label for="kartu_keluarga">Scan Kartu Keluarga (max size 2MB)</label>
                                         <input type="file" name="kartu_keluarga" class="form-control @error('kartu_keluarga') is-invalid @enderror" id="kartu_keluarga" autofocus value="{{ old('kartu_keluarga') }}">
                                     </div> 
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="ktp">Scan KTP (Format .jpg)</label>
+                                        <label for="ktp">Scan KTP (max size 2MB)</label>
                                         <input type="file" name="ktp" class="form-control @error('ktp') is-invalid @enderror" id="ktp" autofocus value="{{ old('ktp') }}">
                                     </div> 
                                 </div> 

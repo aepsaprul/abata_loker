@@ -46,13 +46,23 @@ class HomeController extends Controller
     {
         $lamaran = HcLamaran::where('email', Auth::user()->email)->first();
         $lamaran->master_jabatan_id = $request->master_jabatan_id;
-        $lamaran->surat_lamaran = base64_encode(file_get_contents($request->file('surat_lamaran')));
-        $lamaran->curriculum_vitae = base64_encode(file_get_contents($request->file('curriculum_vitae')));
-        $lamaran->ijazah = base64_encode(file_get_contents($request->file('ijazah')));
-        $lamaran->transkip_nilai = base64_encode(file_get_contents($request->file('transkip_nilai')));
-        $lamaran->foto = base64_encode(file_get_contents($request->file('foto')));
-        $lamaran->kartu_keluarga = base64_encode(file_get_contents($request->file('kartu_keluarga')));
-        $lamaran->ktp = base64_encode(file_get_contents($request->file('ktp')));
+
+        $surat_lamaran = $request->file('surat_lamaran')->store('img', 'public');
+        $lamaran->surat_lamaran = $surat_lamaran;
+        $curriculum_vitae = $request->file('curriculum_vitae')->store('img', 'public');
+        $lamaran->curriculum_vitae = $curriculum_vitae;
+        $ijazah = $request->file('ijazah')->store('img', 'public');
+        $lamaran->ijazah = $ijazah;
+        $transkip_nilai = $request->file('transkip_nilai')->store('img', 'public');
+        $lamaran->transkip_nilai = $transkip_nilai;
+        $kartu_keluarga = $request->file('kartu_keluarga')->store('img', 'public');
+        $lamaran->kartu_keluarga = $kartu_keluarga;
+        $surat_lamaran = $request->file('foto')->store('img', 'public');
+        $lamaran->foto = $surat_lamaran;
+        $ktp = $request->file('ktp')->store('img', 'public');
+        $lamaran->ktp = $ktp;
+        $surat_lamaran = $request->file('foto')->store('img', 'public');
+        $lamaran->foto = $surat_lamaran;
         $lamaran->status_lamaran = 1;
         $lamaran->save();
 
