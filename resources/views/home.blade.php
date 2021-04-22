@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('style')
+<link rel="stylesheet" href="{{ asset('css/bootstrap4/bootstrap-datepicker.min.css') }}">
+@endsection
+
 @section('content')
 
 <div class="container-fluid">
@@ -96,13 +100,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="nama_panggilan">Nama Panggilan</label>
-                                        <input type="text" name="nama_panggilan" class="form-control @error('nama_panggilan') is-invalid @enderror" id="nama_panggilan" placeholder="">
+                                        <input type="text" name="nama_panggilan" class="form-control" id="nama_panggilan" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="nomor_ktp">Nomor KTP</label>
-                                        <input type="text" name="nomor_ktp" class="form-control @error('nomor_ktp') is-invalid @enderror" id="nomor_ktp" placeholder="">
+                                        <input type="text" name="nomor_ktp" class="form-control" id="nomor_ktp">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -135,25 +139,25 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="tempat_lahir">Tempat Lahir</label>
-                                        <input type="text" name="tempat_lahir" class="form-control @error('tempat_lahir') is-invalid @enderror" id="tempat_lahir" placeholder="">
+                                        <input type="text" name="tempat_lahir" class="form-control" id="tempat_lahir" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir</label>
-                                        <input type="text" name="tanggal_lahir" class="form-control @error('tanggal_lahir') is-invalid @enderror" id="tanggal_lahir" placeholder="">
+                                        <input type="text" class="form-control pl-3 tanggal_lahir" name="tanggal_lahir">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="alamat_ktp">Alamat Sesuai KTP</label>
-                                        <input type="text" name="alamat_ktp" class="form-control @error('alamat_ktp') is-invalid @enderror" id="alamat_ktp" placeholder="">
+                                        <input type="text" name="alamat_ktp" class="form-control" id="alamat_ktp" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="alamat_sekarang">Alamat Sekarang</label>
-                                        <input type="text" name="alamat_sekarang" class="form-control @error('alamat_sekarang') is-invalid @enderror" id="alamat_sekarang" placeholder="">
+                                        <input type="text" name="alamat_sekarang" class="form-control" id="alamat_sekarang" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -209,64 +213,64 @@
                                     <p class="text-center text-capitalize font-weight-bold">Susunan Keluarga Sebelum Menikah</p>
                                 </div>
 
-                                <input type="hidden" name="keluarga_sebelum_menikah_hubungan[]" class="form-control @error('keluarga_sebelum_menikah_hubungan[]') is-invalid @enderror" id="keluarga_sebelum_menikah_hubungan[]" value="ayah">
-                                <input type="hidden" name="keluarga_sebelum_menikah_hubungan[]" class="form-control @error('keluarga_sebelum_menikah_hubungan[]') is-invalid @enderror" id="keluarga_sebelum_menikah_hubungan[]" value="ibu">
+                                <input type="hidden" name="keluarga_sebelum_menikah_hubungan[]" class="form-control" id="keluarga_sebelum_menikah_hubungan[]" value="AYAH">
+                                <input type="hidden" name="keluarga_sebelum_menikah_hubungan[]" class="form-control" id="keluarga_sebelum_menikah_hubungan[]" value="IBU">
 
-                                <input type="hidden" name="keluarga_sebelum_menikah_jenis_kelamin[]" class="form-control @error('jenis_kelamin_ayah') is-invalid @enderror" id="jenis_kelamin_ayah" value="L">
-                                <input type="hidden" name="keluarga_sebelum_menikah_jenis_kelamin[]" class="form-control @error('jenis_kelamin_ibu') is-invalid @enderror" id="jenis_kelamin_ibu" value="P">
+                                <input type="hidden" name="keluarga_sebelum_menikah_jenis_kelamin[]" class="form-control" id="jenis_kelamin_ayah" value="L">
+                                <input type="hidden" name="keluarga_sebelum_menikah_jenis_kelamin[]" class="form-control" id="jenis_kelamin_ibu" value="P">
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="nama_ayah">Nama Ayah</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_nama[]" class="form-control @error('nama_ayah') is-invalid @enderror" id="nama_ayah" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_nama[]" class="form-control" id="nama_ayah" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="usia_ayah">Usia Ayah</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_usia[]" class="form-control @error('usia_ayah') is-invalid @enderror" id="usia_ayah" placeholder="">
+                                        <input type="number" name="keluarga_sebelum_menikah_usia[]" class="form-control" id="usia_ayah">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_terakhir_ayah">Pendidikan Terakhir Ayah</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_pendidikan_terakhir[]" class="form-control @error('pendidikan_terakhir_ayah') is-invalid @enderror" id="pendidikan_terakhir_ayah" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_pendidikan_terakhir[]" class="form-control" id="pendidikan_terakhir_ayah" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pekerjaan_terkahir_ayah">Pekerjaan Terakhir Ayah</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control @error('pekerjaan_terkahir_ayah') is-invalid @enderror" id="pekerjaan_terkahir_ayah" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control" id="pekerjaan_terkahir_ayah" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="nama_ibu">Nama Ibu</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_nama[]" class="form-control @error('nama_ibu') is-invalid @enderror" id="nama_ibu" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_nama[]" class="form-control" id="nama_ibu" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="usia_ibu">Usia Ibu</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_usia[]" class="form-control @error('usia_ibu') is-invalid @enderror" id="usia_ibu" placeholder="">
+                                        <input type="number" name="keluarga_sebelum_menikah_usia[]" class="form-control" id="usia_ibu">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_terakhir_ibu">Pendidikan Terakhir Ibu</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_pendidikan_terakhir[]" class="form-control @error('pendidikan_terakhir_ibu') is-invalid @enderror" id="pendidikan_terakhir_ibu" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_pendidikan_terakhir[]" class="form-control" id="pendidikan_terakhir_ibu" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pekerjaan_terakhir_ibu">Pekerjaan Terakhir Ibu</label>
-                                        <input type="text" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control @error('pekerjaan_terakhir_ibu') is-invalid @enderror" id="pekerjaan_terakhir_ibu" placeholder="">
+                                        <input type="text" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control" id="pekerjaan_terakhir_ibu" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div>                                 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jml_saudara">Jumlah Saudara</label>
-                                        <select name="jml_saudara" id="jml_saudara" class="form-control @error('jml_saudara') is-invalid @enderror">
+                                        <select name="jml_saudara" id="jml_saudara" class="form-control">
                                             <option value="0">Tidak punya saudara</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -326,31 +330,31 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="kerabat_hubungan">Hubungan</label>
-                                        <input type="text" name="kerabat_hubungan" class="form-control @error('kerabat_hubungan') is-invalid @enderror" id="kerabat_hubungan" placeholder="">
+                                        <input type="text" name="kerabat_hubungan" class="form-control" id="kerabat_hubungan" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="kerabat_nama">Nama Kerabat</label>
-                                        <input type="text" name="kerabat_nama" class="form-control @error('kerabat_nama') is-invalid @enderror" id="kerabat_nama" placeholder="">
+                                        <input type="text" name="kerabat_nama" class="form-control" id="kerabat_nama" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="kerabat_jenis_kelamin">Jenis Kelamin</label>
-                                        <input type="text" name="kerabat_jenis_kelamin" class="form-control @error('kerabat_jenis_kelamin') is-invalid @enderror" id="kerabat_jenis_kelamin" placeholder="L/P">
+                                        <input type="text" name="kerabat_jenis_kelamin" class="form-control" id="kerabat_jenis_kelamin" placeholder="L/P">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="kerabat_telepon">Telepon Kerabat</label>
-                                        <input type="text" name="kerabat_telepon" class="form-control @error('kerabat_telepon') is-invalid @enderror" id="kerabat_telepon" placeholder="">
+                                        <input type="number" name="kerabat_telepon" class="form-control" id="kerabat_telepon">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="kerabat_alamat">Alamat Kerabat</label>
-                                        <input type="text" name="kerabat_alamat" class="form-control @error('kerabat_alamat') is-invalid @enderror" id="kerabat_alamat" placeholder="">
+                                        <input type="text" name="kerabat_alamat" class="form-control" id="kerabat_alamat" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
@@ -366,7 +370,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="pendidikan_tingkat">Tingkatan Pendidikan</label>
-                                        <select name="pendidikan_tingkat" id="pendidikan_tingkat" class="form-control @error('pendidikan_tingkat') is-invalid @enderror">
+                                        <select name="pendidikan_tingkat" id="pendidikan_tingkat" class="form-control">
                                             <option value="">--Pilih Pendidikan--</option>
                                             <option value="1">SD / Sederajat</option>
                                             <option value="2">SMP / Sederajat</option>
@@ -383,13 +387,13 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="pendidikan_nama_gedung">Nama <span class="nama_gedung"></span></label>
-                                        <input type="text" name="pendidikan_nama_gedung" class="form-control @error('pendidikan_nama_gedung') is-invalid @enderror" id="pendidikan_nama_gedung" placeholder="">
+                                        <input type="text" name="pendidikan_nama_gedung" class="form-control" id="pendidikan_nama_gedung" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_kota">Kota</label>
-                                        <input type="text" name="pendidikan_kota" class="form-control @error('pendidikan_kota') is-invalid @enderror" id="pendidikan_kota" placeholder="">
+                                        <input type="text" name="pendidikan_kota" class="form-control" id="pendidikan_kota" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
@@ -400,13 +404,13 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_tahun_masuk">Tahun Masuk</label>
-                                        <input type="text" name="pendidikan_tahun_masuk" class="form-control @error('pendidikan_tahun_masuk') is-invalid @enderror" id="pendidikan_tahun_masuk" placeholder="">
+                                        <input type="text" name="pendidikan_tahun_masuk" class="form-control" id="pendidikan_tahun_masuk" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_tahun_lulus">Tahun Lulus</label>
-                                        <input type="text" name="pendidikan_tahun_lulus" class="form-control @error('pendidikan_tahun_lulus') is-invalid @enderror" id="pendidikan_tahun_lulus" placeholder="">
+                                        <input type="text" name="pendidikan_tahun_lulus" class="form-control" id="pendidikan_tahun_lulus" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div>                               
                                 <div class="col-md-12">
@@ -427,7 +431,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jml_riwayat_pelatihan">Jumlah Riwayat Pelatihan</label>
-                                        <select name="jml_riwayat_pelatihan" id="jml_riwayat_pelatihan" class="form-control @error('jml_riwayat_pelatihan') is-invalid @enderror">
+                                        <select name="jml_riwayat_pelatihan" id="jml_riwayat_pelatihan" class="form-control">
                                             <option value="0">Tidak Ada</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -455,7 +459,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jml_riwayat_penghargaan">Jumlah Riwayat Penghargaan</label>
-                                        <select name="jml_riwayat_penghargaan" id="jml_riwayat_penghargaan" class="form-control @error('jml_riwayat_penghargaan') is-invalid @enderror">
+                                        <select name="jml_riwayat_penghargaan" id="jml_riwayat_penghargaan" class="form-control">
                                             <option value="0">Tidak Ada</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -483,7 +487,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jml_riwayat_organisasi">Jumlah Riwayat Organisasi</label>
-                                        <select name="jml_riwayat_organisasi" id="jml_riwayat_organisasi" class="form-control @error('jml_riwayat_organisasi') is-invalid @enderror">
+                                        <select name="jml_riwayat_organisasi" id="jml_riwayat_organisasi" class="form-control">
                                             <option value="0">Tidak Ada</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -511,7 +515,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jml_riwayat_pekerjaan">Jumlah Riwayat Pekerjaan</label>
-                                        <select name="jml_riwayat_pekerjaan" id="jml_riwayat_pekerjaan" class="form-control @error('jml_riwayat_pekerjaan') is-invalid @enderror">
+                                        <select name="jml_riwayat_pekerjaan" id="jml_riwayat_pekerjaan" class="form-control">
                                             <option value="0">Tidak Ada</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -551,7 +555,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_1">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_1" class="form-control @error('jawaban_uraian_1') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_1" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -573,7 +577,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_2">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_2" class="form-control @error('jawaban_uraian_2') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_2" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -595,7 +599,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="jawaban_uraian_3">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_3" class="form-control @error('jawaban_uraian_3') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_3" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
@@ -609,7 +613,7 @@
                                         <input class="form-check-input" type="radio" name="jawaban_4" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_4">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_4" class="form-control @error('jawaban_uraian_4') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_4" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
@@ -623,7 +627,7 @@
                                         <input class="form-check-input" type="radio" name="jawaban_5" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_5">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_5" class="form-control @error('jawaban_uraian_5') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_5" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
@@ -637,7 +641,7 @@
                                         <input class="form-check-input" type="radio" name="jawaban_6" id="pertanyaan3_tidak" value="null" checked style="display: none;">
 
                                         <label for="jawaban_uraian_6">Uraian:</label>
-                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_6" class="form-control @error('jawaban_uraian_6') is-invalid @enderror" cols="30" rows="3"></textarea>
+                                        <textarea name="jawaban_uraian[]" id="jawaban_uraian_6" class="form-control" cols="30" rows="3"></textarea>
                                     </div>  
                                 </div>
                                 <div class="col-md-12">
@@ -757,6 +761,10 @@
 @endsection
 
 @section('script')
+
+<script src="{{ asset('js/bootstrap4/bootstrap-datepicker.min.js') }}"></script>
+
+
 <script>
     $(document).ready(function() {
 
@@ -812,25 +820,25 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"nama_istri\">Nama Istri</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control @error('nama_istri') is-invalid @enderror\" id=\"nama_istri\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control\" id=\"nama_istri\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tempat_lahir_istri\">Tempat Lahir Istri</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control @error('tempat_lahir_istri') is-invalid @enderror\" id=\"tempat_lahir_istri\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control\" id=\"tempat_lahir_istri\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tanggal_lahir_istri\">Tanggal Lahir Istri</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control @error('tanggal_lahir_istri') is-invalid @enderror\" id=\"tanggal_lahir_istri\" placeholder=\"\">" +
+                                "<input type=\"text\" id=\"tanggal_lahir_istri\" class=\"form-control pl-3 tanggal_lahir_istri\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_terakhir_istri\">Pekerjaan Terakhir Istri</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_istri') is-invalid @enderror\" id=\"pekerjaan_terakhir_istri\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control\" id=\"pekerjaan_terakhir_istri\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -841,25 +849,25 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"nama_suami\">Nama Suami</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control @error('nama_suami') is-invalid @enderror\" id=\"nama_suami\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control\" id=\"nama_suami\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tempat_lahir_suami\">Tempat Lahir Suami</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control @error('tempat_lahir_suami') is-invalid @enderror\" id=\"tempat_lahir_suami\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control\" id=\"tempat_lahir_suami\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tanggal_lahir_suami\">Tanggal Lahir Suami</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control @error('tanggal_lahir_suami') is-invalid @enderror\" id=\"tanggal_lahir_suami\" placeholder=\"\">" +
+                                "<input type=\"text\" id=\"tanggal_lahir_suami\" class=\"form-control pl-3 tanggal_lahir_suami\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_terakhir_suami\">Pekerjaan Terakhir Suami</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_suami') is-invalid @enderror\" id=\"pekerjaan_terakhir_suami\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control\" id=\"pekerjaan_terakhir_suami\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -881,36 +889,36 @@
             for (let index = 1; index <= jml_saudara; index++) {
 
                 var form_saudara = "" +
-                    "<input type=\"hidden\" name=\"keluarga_sebelum_menikah_hubungan[]\" class=\"form-control @error('keluarga_sebelum_menikah_hubungan[]') is-invalid @enderror\" id=\"keluarga_sebelum_menikah_hubungan[]\" value=\"saudara\">" +
+                    "<input type=\"hidden\" name=\"keluarga_sebelum_menikah_hubungan[]\" class=\"form-control\" id=\"keluarga_sebelum_menikah_hubungan[]\" value=\"saudara\">" +
                     "<div class=\"row\">" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"nama_saudara\">Nama Saudara " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_nama[]\" class=\"form-control @error('nama_saudara') is-invalid @enderror\" id=\"nama_saudara\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_nama[]\" class=\"form-control\" id=\"nama_saudara\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"usia_saudara\">Usia Saudara " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_usia[]\" class=\"form-control @error('usia_saudara') is-invalid @enderror\" id=\"usia_saudara\" placeholder=\"\">" +
+                                "<input type=\"number\" name=\"keluarga_sebelum_menikah_usia[]\" class=\"form-control\" id=\"usia_saudara\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"jenis_kelamin_saudara\">Jenis Kelamin Saudara " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_jenis_kelamin[]\" class=\"form-control @error('jenis_kelamin_saudara') is-invalid @enderror\" id=\"jenis_kelamin_saudara\" placeholder=\"L/P\">" +
+                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_jenis_kelamin[]\" class=\"form-control\" id=\"jenis_kelamin_saudara\" placeholder=\"L/P\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pendidikan_terakhir_saudara\">Pendidikan Terakhir Saudara " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_pendidikan_terakhir[]\" class=\"form-control @error('pendidikan_terakhir_saudara') is-invalid @enderror\" id=\"pendidikan_terakhir_saudara\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_pendidikan_terakhir[]\" class=\"form-control\" id=\"pendidikan_terakhir_saudara\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_terakhir_saudara\">Pekerjaan Terakhir Saudara " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_saudara') is-invalid @enderror\" id=\"pekerjaan_terakhir_saudara\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_sebelum_menikah_pekerjaan_terakhir[]\" class=\"form-control\" id=\"pekerjaan_terakhir_saudara\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div><hr>";
@@ -929,25 +937,26 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"nama_anak\">Nama Anak " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control @error('nama_anak') is-invalid @enderror\" id=\"nama_anak\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_nama[]\" class=\"form-control\" id=\"nama_anak\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tempat_lahir_anak\">Tempat Lahir Anak " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control @error('tempat_lahir_anak') is-invalid @enderror\" id=\"tempat_lahir_anak\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tempat_lahir[]\" class=\"form-control\" id=\"tempat_lahir_anak\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tanggal_lahir_anak\">Tanggal Lahir Anak " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control @error('tanggal_lahir_anak') is-invalid @enderror\" id=\"tanggal_lahir_anak\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\" class=\"form-control\" id=\"tanggal_lahir_anak\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
+                                "<input type=\"text\" id=\"tanggal_lahir_anak\" class=\"form-control pl-3 tanggal_lahir_anak\" name=\"keluarga_setelah_menikah_tanggal_lahir[]\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_terakhir_anak\">Pekerjaan Terakhir Anak " + index + "</label>" +
-                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control @error('pekerjaan_terakhir_anak') is-invalid @enderror\" id=\"pekerjaan_terakhir_anak\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"keluarga_setelah_menikah_pekerjaan_terakhir[]\" class=\"form-control\" id=\"pekerjaan_terakhir_anak\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" +
                     "</div><hr>";
@@ -963,7 +972,7 @@
             var pendidikan_tingkat_value = $('#pendidikan_tingkat').val();
             var form_jurusan = "" +
                 "<label for=\"pendidikan_jurusan\">Jurusan</label>" +
-                "<input type=\"text\" name=\"pendidikan_jurusan\" class=\"form-control @error('pendidikan_jurusan') is-invalid @enderror\" id=\"pendidikan_jurusan\" placeholder=\"\">";
+                "<input type=\"text\" name=\"pendidikan_jurusan\" class=\"form-control\" id=\"pendidikan_jurusan\" onkeyup=\"this.value = this.value.toUpperCase()\">";
 
             if (pendidikan_tingkat_value == 1 || pendidikan_tingkat_value == 2) {
                 $('.nama_gedung').append('Sekolah');
@@ -1001,13 +1010,13 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pelatihan_nama\">Nama Pelatihan " + index + "</label>" +
-                                "<input type=\"text\" name=\"pelatihan_nama[]\" class=\"form-control @error('pelatihan_nama') is-invalid @enderror\" id=\"pelatihan_nama\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pelatihan_nama[]\" class=\"form-control\" id=\"pelatihan_nama\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pelatihan_tahun\">Tahun</label>" +
-                                "<input type=\"text\" name=\"pelatihan_tahun[]\" class=\"form-control @error('pelatihan_tahun') is-invalid @enderror\" id=\"pelatihan_tahun\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pelatihan_tahun[]\" class=\"form-control\" id=\"pelatihan_tahun\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -1033,13 +1042,13 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"penghargaan_nama\">Nama penghargaan " + index + "</label>" +
-                                "<input type=\"text\" name=\"penghargaan_nama[]\" class=\"form-control @error('penghargaan_nama') is-invalid @enderror\" id=\"penghargaan_nama\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"penghargaan_nama[]\" class=\"form-control\" id=\"penghargaan_nama\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"penghargaan_tahun\">Tahun</label>" +
-                                "<input type=\"text\" name=\"penghargaan_tahun[]\" class=\"form-control @error('penghargaan_tahun') is-invalid @enderror\" id=\"penghargaan_tahun\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"penghargaan_tahun[]\" class=\"form-control\" id=\"penghargaan_tahun\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -1060,19 +1069,19 @@
                         "<div class=\"col-md-12\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"organisasi_nama\">Nama Organisasi " + index + "</label>" +
-                                "<input type=\"text\" name=\"organisasi_nama[]\" class=\"form-control @error('organisasi_nama') is-invalid @enderror\" id=\"organisasi_nama\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"organisasi_nama[]\" class=\"form-control id=\"organisasi_nama\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"organisasi_jabatan\">Jabatan</label>" +
-                                "<input type=\"text\" name=\"organisasi_jabatan[]\" class=\"form-control @error('organisasi_jabatan') is-invalid @enderror\" id=\"organisasi_jabatan\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"organisasi_jabatan[]\" class=\"form-control\" id=\"organisasi_jabatan\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"organisasi_masa_kerja\">Masa Kerja</label>" +
-                                "<input type=\"text\" name=\"organisasi_masa_kerja[]\" class=\"form-control @error('organisasi_masa_kerja') is-invalid @enderror\" id=\"organisasi_masa_kerja\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"organisasi_masa_kerja[]\" class=\"form-control\" id=\"organisasi_masa_kerja\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" +
                     "</div>";
@@ -1092,67 +1101,67 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_nama\">Nama Perusahaan " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_nama[]\" class=\"form-control @error('pekerjaan_nama') is-invalid @enderror\" id=\"pekerjaan_nama\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_nama[]\" class=\"form-control\" id=\"pekerjaan_nama\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_jenis_industri\">Jenis Industri " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_jenis_industri[]\" class=\"form-control @error('pekerjaan_jenis_industri') is-invalid @enderror\" id=\"pekerjaan_jenis_industri\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_jenis_industri[]\" class=\"form-control\" id=\"pekerjaan_jenis_industri\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_jabatan_awal\">Jabatan Awal " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_jabatan_awal[]\" class=\"form-control @error('pekerjaan_jabatan_awal') is-invalid @enderror\" id=\"pekerjaan_jabatan_awal\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_jabatan_awal[]\" class=\"form-control\" id=\"pekerjaan_jabatan_awal\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_jabatan_akhir\">Jabatan Akhir " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_jabatan_akhir[]\" class=\"form-control @error('pekerjaan_jabatan_akhir') is-invalid @enderror\" id=\"pekerjaan_jabatan_akhir\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_jabatan_akhir[]\" class=\"form-control\" id=\"pekerjaan_jabatan_akhir\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_awal_bekerja\">Awal Bekerja " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_awal_bekerja[]\" class=\"form-control @error('pekerjaan_awal_bekerja') is-invalid @enderror\" id=\"pekerjaan_awal_bekerja\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_awal_bekerja[]\" class=\"form-control\" id=\"pekerjaan_awal_bekerja\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_akhir_bekerja\">Akhir Bekerja " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_akhir_bekerja[]\" class=\"form-control @error('pekerjaan_akhir_bekerja') is-invalid @enderror\" id=\"pekerjaan_akhir_bekerja\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_akhir_bekerja[]\" class=\"form-control\" id=\"pekerjaan_akhir_bekerja\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_gaji_awal\">Gaji Awal " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_gaji_awal[]\" class=\"form-control @error('pekerjaan_gaji_awal') is-invalid @enderror\" id=\"pekerjaan_gaji_awal\" placeholder=\"\">" +
+                                "<input type=\"number\" name=\"pekerjaan_gaji_awal[]\" class=\"form-control\" id=\"pekerjaan_gaji_awal\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_gaji_akhir\">Gaji Akhir " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_gaji_akhir[]\" class=\"form-control @error('pekerjaan_gaji_akhir') is-invalid @enderror\" id=\"pekerjaan_gaji_akhir\" placeholder=\"\">" +
+                                "<input type=\"number\" name=\"pekerjaan_gaji_akhir[]\" class=\"form-control\" id=\"pekerjaan_gaji_akhir\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_nama_atasan\">Nama Atasan Langsung " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_nama_atasan[]\" class=\"form-control @error('pekerjaan_nama_atasan') is-invalid @enderror\" id=\"pekerjaan_nama_atasan\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_nama_atasan[]\" class=\"form-control\" id=\"pekerjaan_nama_atasan\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_alasan_berhenti\">Alasan Berhenti " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_alasan_berhenti[]\" class=\"form-control @error('pekerjaan_alasan_berhenti') is-invalid @enderror\" id=\"pekerjaan_alasan_berhenti\" placeholder=\"\">" +
+                                "<input type=\"text\" name=\"pekerjaan_alasan_berhenti[]\" class=\"form-control\" id=\"pekerjaan_alasan_berhenti\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +  
                         "</div>" +
                         "<div class=\"col-md-12\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"tugas_pokok\">Uraikan Tugas Pokok Anda Di Perusahaan Terakhir " + index + "</label>" +
-                                "<textarea name=\"tugas_pokok\" id=\"tugas_pokok[]\" class=\"form-control @error('tugas_pokok') is-invalid @enderror\" cols=\"30\" rows=\"3\"></textarea>" +
+                                "<textarea name=\"tugas_pokok\" id=\"tugas_pokok[]\" class=\"form-control\" cols=\"30\" rows=\"3\" onkeyup=\"this.value = this.value.toUpperCase()\"></textarea>" +
                             "</div>" +  
                         "</div>" +
                     "</div>";
@@ -1160,6 +1169,32 @@
                 $('#riwayat_pekerjaan').append(pekerjaan_value);
             }
         });
+
+        $(function(){
+            $(".tanggal_lahir").datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true,
+            });
+
+            $(".tanggal_lahir_istri").datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true,
+            });
+
+            $(".tanggal_lahir_suami").datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true,
+            });
+
+            $(".tanggal_lahir_anak").datepicker({
+                    format: 'yyyy-mm-dd',
+                    autoclose: true,
+                    todayHighlight: true,
+            });
+		});
     });
 </script>
 @endsection

@@ -107,16 +107,20 @@ class HomeController extends Controller
             $keluarga_sebelum_menikah->save();
         }
 
-        foreach ($request->keluarga_setelah_menikah_hubungan as $key => $value) {
-            $keluarga_setelah_menikah = new HcKeluargaSetelahMenikah;
-            $keluarga_setelah_menikah->email = Auth::user()->email;
-            $keluarga_setelah_menikah->hubungan = $value;
-            $keluarga_setelah_menikah->nama = $request->keluarga_setelah_menikah_nama[$key];
-            $keluarga_setelah_menikah->tempat_lahir = $request->keluarga_setelah_menikah_tempat_lahir[$key];
-            $keluarga_setelah_menikah->tanggal_lahir = $request->keluarga_setelah_menikah_tanggal_lahir[$key];
-            $keluarga_setelah_menikah->pekerjaan_terakhir = $request->keluarga_setelah_menikah_pekerjaan_terakhir[$key];
-            $keluarga_setelah_menikah->save();
+        if (!empty($request->keluarga_setelah_menikah_hubungan)) {
+            # code...
+            foreach ($request->keluarga_setelah_menikah_hubungan as $key => $value) {
+                $keluarga_setelah_menikah = new HcKeluargaSetelahMenikah;
+                $keluarga_setelah_menikah->email = Auth::user()->email;
+                $keluarga_setelah_menikah->hubungan = $value;
+                $keluarga_setelah_menikah->nama = $request->keluarga_setelah_menikah_nama[$key];
+                $keluarga_setelah_menikah->tempat_lahir = $request->keluarga_setelah_menikah_tempat_lahir[$key];
+                $keluarga_setelah_menikah->tanggal_lahir = $request->keluarga_setelah_menikah_tanggal_lahir[$key];
+                $keluarga_setelah_menikah->pekerjaan_terakhir = $request->keluarga_setelah_menikah_pekerjaan_terakhir[$key];
+                $keluarga_setelah_menikah->save();
+            }
         }
+
 
         $kerabat = new HcKerabatDarurat;
         $kerabat->email = Auth::user()->email;
@@ -137,46 +141,59 @@ class HomeController extends Controller
         $pendidikan->tahun_lulus = $request->pendidikan_tahun_lulus;
         $pendidikan->save();
 
-        foreach ($request->pelatihan_nama as $key => $value) {
-            $pelatihan = new HcPelatihan;
-            $pelatihan->email = Auth::user()->email;
-            $pelatihan->nama = $value;
-            $pelatihan->tahun = $request->pelatihan_tahun[$key];
-            $pelatihan->save();
+        if (!empty($request->pelatihan_nama)) {
+            # code...
+            foreach ($request->pelatihan_nama as $key => $value) {
+                $pelatihan = new HcPelatihan;
+                $pelatihan->email = Auth::user()->email;
+                $pelatihan->nama = $value;
+                $pelatihan->tahun = $request->pelatihan_tahun[$key];
+                $pelatihan->save();
+            }
         }
 
-        foreach ($request->penghargaan_nama as $key => $value) {
-            $penghargaan = new HcPenghargaan;
-            $penghargaan->email = Auth::user()->email;
-            $penghargaan->nama = $value;
-            $penghargaan->tahun = $request->penghargaan_tahun[$key];
-            $penghargaan->save();
+        if (!empty($request->penghargaan_nama)) {
+            # code...
+            foreach ($request->penghargaan_nama as $key => $value) {
+                $penghargaan = new HcPenghargaan;
+                $penghargaan->email = Auth::user()->email;
+                $penghargaan->nama = $value;
+                $penghargaan->tahun = $request->penghargaan_tahun[$key];
+                $penghargaan->save();
+            }
         }
 
-        foreach ($request->organisasi_nama as $key => $value) {
-            $organisasi = new HcOrganisasi;
-            $organisasi->email = Auth::user()->email;
-            $organisasi->nama = $value;
-            $organisasi->jabatan = $request->organisasi_jabatan[$key];
-            $organisasi->masa_kerja = $request->organisasi_masa_kerja[$key];
-            $organisasi->save();
+        if (!empty($request->organisasi_nama)) {
+            # code...
+            foreach ($request->organisasi_nama as $key => $value) {
+                $organisasi = new HcOrganisasi;
+                $organisasi->email = Auth::user()->email;
+                $organisasi->nama = $value;
+                $organisasi->jabatan = $request->organisasi_jabatan[$key];
+                $organisasi->masa_kerja = $request->organisasi_masa_kerja[$key];
+                $organisasi->save();
+            }
         }
 
-        foreach ($request->pekerjaan_nama as $key => $value) {
-            $pekerjaan = new HcRiwayatPekerjaan;
-            $pekerjaan->email = Auth::user()->email;
-            $pekerjaan->nama_perusahaan = $request->pekerjaan_nama[$key];
-            $pekerjaan->jenis_industri = $request->pekerjaan_jenis_industri[$key];
-            $pekerjaan->jabatan_awal = $request->pekerjaan_jabatan_awal[$key];
-            $pekerjaan->jabatan_akhir = $request->pekerjaan_jabatan_akhir[$key];
-            $pekerjaan->awal_bekerja = $request->pekerjaan_awal_bekerja[$key];
-            $pekerjaan->akhir_bekerja = $request->pekerjaan_akhir_bekerja[$key];
-            $pekerjaan->gaji_awal = $request->pekerjaan_gaji_awal[$key];
-            $pekerjaan->gaji_akhir = $request->pekerjaan_gaji_akhir[$key];
-            $pekerjaan->nama_atasan = $request->pekerjaan_nama_atasan[$key];
-            $pekerjaan->alasan_berhenti = $request->pekerjaan_alasan_berhenti[$key];
-            $pekerjaan->save();
+        if (!empty($request->pekerjaan_nama)) {
+            # code...
+            foreach ($request->pekerjaan_nama as $key => $value) {
+                $pekerjaan = new HcRiwayatPekerjaan;
+                $pekerjaan->email = Auth::user()->email;
+                $pekerjaan->nama_perusahaan = $request->pekerjaan_nama[$key];
+                $pekerjaan->jenis_industri = $request->pekerjaan_jenis_industri[$key];
+                $pekerjaan->jabatan_awal = $request->pekerjaan_jabatan_awal[$key];
+                $pekerjaan->jabatan_akhir = $request->pekerjaan_jabatan_akhir[$key];
+                $pekerjaan->awal_bekerja = $request->pekerjaan_awal_bekerja[$key];
+                $pekerjaan->akhir_bekerja = $request->pekerjaan_akhir_bekerja[$key];
+                $pekerjaan->gaji_awal = $request->pekerjaan_gaji_awal[$key];
+                $pekerjaan->gaji_akhir = $request->pekerjaan_gaji_akhir[$key];
+                $pekerjaan->nama_atasan = $request->pekerjaan_nama_atasan[$key];
+                $pekerjaan->alasan_berhenti = $request->pekerjaan_alasan_berhenti[$key];
+                $pekerjaan->save();
+            }
         }
+
 
         $data_jawaban = [
             $request->jawaban_1,

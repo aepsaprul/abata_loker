@@ -32,7 +32,7 @@
                         <div class="col-md-4 mx-auto">
                             <div class="form-group">
                                 <label for="telepon" class="font-weight-bold">Nomor WhatsApp</label>
-                                <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" required autocomplete="telepon" autofocus>
+                                <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" required autocomplete="telepon" autofocus placeholder="08xxxxxxxxxx">
 
                                 @error('telepon')
                                     <span class="invalid-feedback" role="alert">
@@ -60,7 +60,7 @@
                         <div class="col-md-4 mx-auto">
                             <div class="form-group">
                                 <label for="password" class="font-weight-bold">{{ __('Password') }}</label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="min 8 karakter">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
