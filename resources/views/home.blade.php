@@ -31,25 +31,25 @@
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="surat_lamaran">Scan Surat Lamaran (max size 2MB)</label>
+                                    <label for="surat_lamaran">Scan Surat Lamaran (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="surat_lamaran" class="form-control @error('surat_lamaran') is-invalid @enderror" id="surat_lamaran" autofocus value="{{ old('surat_lamaran') }}">
                                 </div> 
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="curriculum_vitae">Scan Curriculum Vitae (Format .jpg)</label>
+                                    <label for="curriculum_vitae">Scan Curriculum Vitae (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="curriculum_vitae" class="form-control @error('curriculum_vitae') is-invalid @enderror" id="curriculum_vitae" autofocus value="{{ old('curriculum_vitae') }}">
                                 </div> 
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="ijazah">Scan Ijazah (Format .jpg)</label>
+                                    <label for="ijazah">Scan Ijazah (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="ijazah" class="form-control @error('ijazah') is-invalid @enderror" id="ijazah" autofocus value="{{ old('ijazah') }}">
                                 </div> 
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="transkip_nilai">Scan Transkip Nilai (Format .jpg)</label>
+                                    <label for="transkip_nilai">Scan Transkip Nilai (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="transkip_nilai" class="form-control @error('transkip_nilai') is-invalid @enderror" id="transkip_nilai" autofocus value="{{ old('transkip_nilai') }}">
                                 </div> 
                             </div> 
@@ -61,13 +61,13 @@
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="kartu_keluarga">Scan Kartu Keluarga (Format .jpg)</label>
+                                    <label for="kartu_keluarga">Scan Kartu Keluarga (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="kartu_keluarga" class="form-control @error('kartu_keluarga') is-invalid @enderror" id="kartu_keluarga" autofocus value="{{ old('kartu_keluarga') }}">
                                 </div> 
                             </div> 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="ktp">Scan KTP (Format .jpg)</label>
+                                    <label for="ktp">Scan KTP (JPG/PNG max size 2MB)</label>
                                     <input type="file" name="ktp" class="form-control @error('ktp') is-invalid @enderror" id="ktp" autofocus value="{{ old('ktp') }}">
                                 </div> 
                             </div> 
@@ -88,7 +88,7 @@
                     @if ($lamaran->status_lamaran == 1)
                         <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">terima kasih</h3>
                         <p class="text-center text-capitalize font-weight-bold">berkas sedang kami proses...</p>
-                    @elseif ($lamaran->status_lamaran == 2)
+                    @elseif ($lamaran->status_lamaran == 7)
                         {{-- form rekrutmen  --}}
                         <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">selamat datang</h3>
                         <p class="text-center text-capitalize font-weight-bold">silahkan isi formulir dengan lengkap dan benar</p>
@@ -119,10 +119,10 @@
                                     <div class="form-group">
                                         <label for="agama">Agama</label>
                                         <select name="agama" id="agama" class="form-control @error('agama') is-invalid @enderror">
-                                            <option value="islam">Islam</option>
-                                            <option value="kristen">Kristen</option>
-                                            <option value="hindu">Hindu</option>
-                                            <option value="budha">Budha</option>
+                                            <option value="ISLAM">ISLAM</option>
+                                            <option value="KRISTEN">KRISTEN</option>
+                                            <option value="HINDU">HINDU</option>
+                                            <option value="BUDHA">BUDHA</option>
                                         </select>
                                     </div>  
                                 </div> 
@@ -404,13 +404,13 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_tahun_masuk">Tahun Masuk</label>
-                                        <input type="text" name="pendidikan_tahun_masuk" class="form-control" id="pendidikan_tahun_masuk" onkeyup="this.value = this.value.toUpperCase()">
+                                        <input type="text" name="pendidikan_tahun_masuk" class="form-control" id="pendidikan_tahun_masuk" maxlength="4" placeholder="ex 2020" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div> 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                     <div class="form-group">
                                         <label for="pendidikan_tahun_lulus">Tahun Lulus</label>
-                                        <input type="text" name="pendidikan_tahun_lulus" class="form-control" id="pendidikan_tahun_lulus" onkeyup="this.value = this.value.toUpperCase()">
+                                        <input type="text" name="pendidikan_tahun_lulus" class="form-control" id="pendidikan_tahun_lulus" maxlength="4" placeholder="ex 2020" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
                                 </div>                               
                                 <div class="col-md-12">
@@ -678,79 +678,8 @@
                             <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">terima kasih</h3>
                             <p class="text-center text-capitalize font-weight-bold">berkas sedang kami proses...</p>
                         @else
-                        {{-- form persyaratan  --}}
-                        <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">selamat datang</h3>
-                        <p class="text-center text-capitalize font-weight-bold">silahkan isi formulir dengan lengkap dan benar</p>
-                        <form action="{{ route('home.persyaratan.update') }}" method="post" enctype="multipart/form-data">
-                            @csrf
-                            @method('PUT')
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="master_jabatan_id">Posisi yg dilamar</label>
-                                        <select name="master_jabatan_id" id="master_jabatan_id" class="form-control">
-                                            <option value="">--Pilih Posisi--</option>
-                                            @foreach ($lokers as $loker)  
-                                                <option value="{{ $loker->master_jabatan_id }}">{{ $loker->masterJabatan->nama_jabatan }}</option>    
-                                            @endforeach
-                                        </select>  
-                                    </div>  
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="surat_lamaran">Scan Surat Lamaran (max size 2MB)</label>
-                                        <input type="file" name="surat_lamaran" class="form-control @error('surat_lamaran') is-invalid @enderror" id="surat_lamaran" autofocus value="{{ old('surat_lamaran') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="curriculum_vitae">Scan Curriculum Vitae (max size 2MB)</label>
-                                        <input type="file" name="curriculum_vitae" class="form-control @error('curriculum_vitae') is-invalid @enderror" id="curriculum_vitae" autofocus value="{{ old('curriculum_vitae') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="ijazah">Scan Ijazah (max size 2MB)</label>
-                                        <input type="file" name="ijazah" class="form-control @error('ijazah') is-invalid @enderror" id="ijazah" autofocus value="{{ old('ijazah') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="transkip_nilai">Scan Transkip Nilai (max size 2MB)</label>
-                                        <input type="file" name="transkip_nilai" class="form-control @error('transkip_nilai') is-invalid @enderror" id="transkip_nilai" autofocus value="{{ old('transkip_nilai') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="foto">Foto 3x4</label>
-                                        <input type="file" name="foto" class="form-control @error('foto') is-invalid @enderror" id="foto" autofocus value="{{ old('foto') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="kartu_keluarga">Scan Kartu Keluarga (max size 2MB)</label>
-                                        <input type="file" name="kartu_keluarga" class="form-control @error('kartu_keluarga') is-invalid @enderror" id="kartu_keluarga" autofocus value="{{ old('kartu_keluarga') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="ktp">Scan KTP (max size 2MB)</label>
-                                        <input type="file" name="ktp" class="form-control @error('ktp') is-invalid @enderror" id="ktp" autofocus value="{{ old('ktp') }}">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <hr class="border-secondary">
-                                    </div> 
-                                </div> 
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <button class="btn btn-primary btn-block">Kirim</button>
-                                    </div> 
-                                </div> 
-                            </div>
-                        </form>
-                        {{-- end form persyaratan  --}}
+                        <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">terima kasih</h3>
+                        <p class="text-center text-capitalize font-weight-bold">berkas sedang kami proses...</p>
                     @endif
                 @endif
             </div>
@@ -1016,7 +945,7 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pelatihan_tahun\">Tahun</label>" +
-                                "<input type=\"text\" name=\"pelatihan_tahun[]\" class=\"form-control\" id=\"pelatihan_tahun\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
+                                "<input type=\"text\" name=\"pelatihan_tahun[]\" class=\"form-control\" id=\"pelatihan_tahun\" maxlength=\"4\" placeholder=\"ex 2020\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -1048,7 +977,7 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"penghargaan_tahun\">Tahun</label>" +
-                                "<input type=\"text\" name=\"penghargaan_tahun[]\" class=\"form-control\" id=\"penghargaan_tahun\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
+                                "<input type=\"text\" name=\"penghargaan_tahun[]\" class=\"form-control\" id=\"penghargaan_tahun\" maxlength=\"4\" placeholder=\"ex 2020\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
                             "</div>" +
                         "</div>" +
                     "</div>";
@@ -1125,13 +1054,13 @@
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_awal_bekerja\">Awal Bekerja " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_awal_bekerja[]\" class=\"form-control\" id=\"pekerjaan_awal_bekerja\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
+                                "<input type=\"text\" class=\"form-control pl-3 pekerjaan_awal_bekerja_"+index+"\" name=\"pekerjaan_awal_bekerja[]\" autocomplete=\"off\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
                             "<div class=\"form-group\">" +
                                 "<label for=\"pekerjaan_akhir_bekerja\">Akhir Bekerja " + index + "</label>" +
-                                "<input type=\"text\" name=\"pekerjaan_akhir_bekerja[]\" class=\"form-control\" id=\"pekerjaan_akhir_bekerja\" onkeyup=\"this.value = this.value.toUpperCase()\">" +
+                                "<input type=\"text\" class=\"form-control pl-3 pekerjaan_akhir_bekerja_"+index+"\" name=\"pekerjaan_akhir_bekerja[]\" autocomplete=\"off\">" +
                             "</div>" +  
                         "</div>" + 
                         "<div class=\"col-lg-6 col-md-6 col-sm-6 col-6\">" +
@@ -1166,7 +1095,22 @@
                         "</div>" +
                     "</div>";
 
+                
+
                 $('#riwayat_pekerjaan').append(pekerjaan_value);
+
+                $(function() {
+                    $(".pekerjaan_awal_bekerja_"+index).datepicker({
+                        format: 'yyyy-mm-dd',
+                        autoclose: true,
+                        todayHighlight: true,
+                    });
+                    $(".pekerjaan_akhir_bekerja_"+index).datepicker({
+                        format: 'yyyy-mm-dd',
+                        autoclose: true,
+                        todayHighlight: true,
+                    });
+                });
             }
         });
 

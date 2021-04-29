@@ -18,7 +18,7 @@
                         <div class="col-md-4 mx-auto">
                             <div class="form-group">
                                 <label for="name" class="font-weight-bold">Nama Lengkap</label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  onkeyup="this.value = this.value.toUpperCase()">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
