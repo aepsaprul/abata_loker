@@ -162,7 +162,7 @@
                     @elseif ($lamaran->status_lamaran == 1)
                         <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">terima kasih</h3>
                         <p class="text-center text-capitalize font-weight-bold">berkas sedang kami proses...</p>
-                    @elseif ($lamaran->status_lamaran == 7)
+                    @elseif ($lamaran->status_lamaran == 2)
                         {{-- form rekrutmen  --}}
                         <h3 class="text-uppercase font-weight-bold p-2 text-center selamatdatang">selamat datang</h3>
                         <p class="text-center text-capitalize font-weight-bold">silahkan isi formulir dengan lengkap dan benar</p>
@@ -219,7 +219,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="tanggal_lahir">Tanggal Lahir</label>
-                                        <input type="text" class="form-control pl-3 tanggal_lahir" name="tanggal_lahir">
+                                        <input type="text" class="form-control pl-3 tanggal_lahir" name="tanggal_lahir" autocomplete="off">
                                     </div>  
                                 </div> 
                                 <div class="col-md-12">
