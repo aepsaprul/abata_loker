@@ -340,6 +340,12 @@
                                         <label for="pekerjaan_terakhir_ibu">Pekerjaan Terakhir Ibu</label>
                                         <input type="text" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control" id="pekerjaan_terakhir_ibu" onkeyup="this.value = this.value.toUpperCase()">
                                     </div>  
+                                </div>   
+                                <div class="col-lg-12 col-md-12 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label for="penghasilan_orangtua">Penghasilan Orang Tua</label>
+                                        <input type="number" name="keluarga_sebelum_menikah_pekerjaan_terakhir[]" class="form-control" id="penghasilan_orangtua" onkeyup="this.value = this.value.toUpperCase()">
+                                    </div>  
                                 </div>                                 
                                 <div class="col-md-12">
                                     <div class="form-group">
